@@ -5,29 +5,49 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="RobotoCondensed-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="RobotoCondensed-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="PTMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="Roboto-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.min.css" />
   <title>Smart Device</title>
 </head>
 
-<body class="page__body">
+<body class="page__body container">
   <header class="header">
-    <div class="header__logo logo">
-      <a class="logo__link">
-        <img class="logo__img" src="img/svg/logo.svg" alt="Логотип компании Smart Device">
-        <p class="logo__text">Smart Device <span>умные технологии</span></p>
-      </a>
-    </div>
-    <div class="header__contact contact">
-      <ul class="contact__list">
-        <li class="contact__item">
-          <a class="contact__mail mail" href="mailto:info@sd.ru"><span class="mail__text">info@sd.ru</span></a>
-        </li>
-        <li class="contact__item">
-          <a class="contact__tel tel" href="tel:+74950005252"> <span class="tel__text">+7 (495) 000 52 52</span></a>
-        </li>
-        <li class="contact__item">
-          <a class="contact__order" href="#">Заказать звонок</a>
-        </li>
-      </ul>
+    <div class="header__wrapper">
+      <div class="header__logo logo">
+        <a class="logo__link">
+          <img class="logo__img" src="img/svg/logo.svg" alt="Логотип компании Smart Device" width="55" height="55">
+          <p class="logo__text">Smart Device <span class="logo__text--sub">умные технологии</span></p>
+        </a>
+      </div>
+      <div class="header__contact contact">
+        <ul class="contact__list">
+          <li class="contact__item">
+            <a class="contact__link" href="mailto:info@sd.ru">
+              <svg class="contact__img" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 21 20">
+                <path
+                  d="M18.06 0H2.95C1.6 0 .5 1.44.5 3.21V16.8c0 1.76 1.1 3.2 2.45 3.2h15.1c1.35 0 2.45-1.44 2.45-3.21V3.22C20.5 1.45 19.4 0 18.06 0Zm1.33 16.79c0 .96-.6 1.74-1.33 1.74H2.95c-.74 0-1.33-.78-1.33-1.74V3.22c0-.96.6-1.75 1.33-1.75h15.1c.74 0 1.33.79 1.33 1.75v13.57Z" />
+                <path
+                  d="m13.11 9.83 4.9-5.76a.9.9 0 0 0 .04-1.04c-.21-.3-.56-.33-.8-.06l-6.74 7.96-1.32-1.54v-.02a.95.95 0 0 0-.1-.1l-5.35-6.3c-.23-.27-.58-.25-.79.06A.9.9 0 0 0 3 4.07l4.94 5.81-4.92 6.06a.9.9 0 0 0-.03 1.04c.11.15.26.24.41.24a.5.5 0 0 0 .38-.2l5-6.15 1.36 1.6a.5.5 0 0 0 .37.18c.14 0 .27-.07.38-.2l1.4-1.63 4.97 6.2c.1.14.24.2.38.2a.5.5 0 0 0 .4-.22.9.9 0 0 0-.01-1.04L13.1 9.83Z" />
+              </svg>
+              <span class="contact__text">info@sd.ru</span>
+            </a>
+          </li>
+          <li class="contact__item">
+            <a class="contact__link" href="tel:+74950005252">
+              <svg class="contact__img" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 21 20">
+                <path
+                  d="M16.31 12.39c-.4-.43-.9-.66-1.42-.66-.52 0-1.02.23-1.45.66L12.1 13.7l-.32-.16a5.4 5.4 0 0 1-.42-.23 14.51 14.51 0 0 1-3.48-3.16 8.55 8.55 0 0 1-1.14-1.8c.35-.32.67-.65.98-.96l.36-.36c.88-.89.88-2.04 0-2.92L6.92 2.96l-.4-.4c-.25-.26-.51-.53-.79-.78a2 2 0 0 0-1.41-.62c-.52 0-1.02.21-1.44.62L1.42 3.24a3.2 3.2 0 0 0-.9 1.96 7.4 7.4 0 0 0 .54 3.13c.68 1.84 1.7 3.55 3.23 5.38a19.89 19.89 0 0 0 6.63 5.18A10.33 10.33 0 0 0 14.9 20c.98 0 1.8-.35 2.44-1.05l.02-.02c.22-.26.47-.5.74-.76l.55-.55c.42-.43.64-.94.64-1.46s-.23-1.02-.65-1.44l-2.33-2.33Zm1.52 4.44-.52.52c-.27.26-.55.54-.81.84-.43.46-.93.67-1.6.67h-.19a9.18 9.18 0 0 1-3.3-.99 18.64 18.64 0 0 1-6.23-4.88 17.13 17.13 0 0 1-3.05-5.06 6.02 6.02 0 0 1-.47-2.64c.04-.5.23-.9.58-1.25L3.68 2.6c.21-.2.43-.3.65-.3a.9.9 0 0 1 .61.3h.02l.76.76.4.41 1.15 1.15c.45.45.45.86 0 1.31l-.36.36c-.36.37-.7.7-1.06 1.03l-.02.02c-.37.37-.3.72-.22.96l.01.04c.3.73.72 1.41 1.37 2.23a15.5 15.5 0 0 0 3.75 3.41c.18.11.35.2.52.28.16.08.3.15.42.23.02 0 .04.02.05.03.15.07.28.1.42.1a.9.9 0 0 0 .64-.29l1.45-1.44c.14-.15.37-.32.64-.32.26 0 .48.17.6.3l.01.02 2.33 2.32c.44.43.44.88 0 1.32ZM11.3 4.76a5.38 5.38 0 0 1 4.43 4.42c.06.28.3.47.57.47h.1a.57.57 0 0 0 .47-.66 6.5 6.5 0 0 0-5.36-5.36.57.57 0 0 0-.66.47c-.06.3.15.6.46.66Z" />
+                <path
+                  d="M20.5 8.82a10.7 10.7 0 0 0-3.02-5.8c-1.6-1.6-3.6-2.64-5.82-3.01a.57.57 0 1 0-.18 1.12 9.6 9.6 0 0 1 7.89 7.88c.04.28.28.47.56.47h.1c.3-.05.52-.35.46-.66Z" />
+              </svg>
+              <span class="contact__text">+7 (495) 000 52 52</span></a>
+          </li>
+        </ul>
+      </div>
+      <a class="header__button" href="#">Заказать звонок</a>
     </div>
   </header>
   <main>
@@ -38,32 +58,32 @@
       <a class="info__link">Получить бесплатную консультацию</a>
     </section>
 
-    <section class="advantage">
+    <section class="adventage">
       <h2 class="visually-hidden">Преимущества компании Smart Device</h2>
-      <ul class="advantage__list">
-        <li class="advantage__item">
-          <svg class="advantage__pic">
+      <ul class="adventage__list">
+        <li class="adventage__item">
+          <svg class="adventage__pic">
           </svg>
           <h3 class="advantage__title">Оперативные сроки</h3>
           <p class="advantage__description">Усовершенствованная логистическая система позволяет нам просчитывать
             стоимость, производить и&nbsp;доставлять заказы плат и&nbsp;комплектующих в&nbsp;самые короткие сроки</p>
         </li>
-        <li class="advantage__item">
-          <svg class="advantage__pic">
+        <li class="adventage__item">
+          <svg class="adventage__pic">
           </svg>
           <h3 class="advantage__title">Крупные поставщики</h3>
           <p class="advantage__description">Нашими поставщиками являются такие крупные мировые компании как: OSRAM,
             CREE, HOLGLITRONIC, REFOND. Сотрудничество с&nbsp;такими компаниями обеспечивает хорошее качество нашей
             продукции.</p>
         </li>
-        <li class="advantage__item">
-          <svg class="advantage__pic">
+        <li class="adventage__item">
+          <svg class="adventage__pic">
           </svg>
           <h3 class="advantage__title">Полная конфиденциальность</h3>
           <p class="advantage__description">По&nbsp;желанию клиента мы&nbsp;обеспечиваем полную конфиденциальность.</p>
         </li>
-        <li class="advantage__item">
-          <svg class="advantage__pic">
+        <li class="adventage__item">
+          <svg class="adventage__pic">
           </svg>
           <h3 class="advantage__title">Персонализация стоимости</h3>
           <p class="advantage__description">Мы&nbsp;подбираем определенную фабрику, поставщиков, вид доставки, чтобы
@@ -73,8 +93,8 @@
     </section>
 
     <section class="about">
-      <svg class="about__img" >
-      <h2 class="about__title">О&nbsp;компании</h2>
+      <svg class="about__img"></svg>
+      <h3 class="about__title">О&nbsp;компании</h3>
       <p class="about__description">Мы&nbsp;поставляем электронные комплектующие, производим печатные платы
         и&nbsp;предоставляем мировые технологии с&nbsp;1997 года. Выполняем срочные заказы и&nbsp;пилотные образцы
         до&nbsp;10 дней.
@@ -92,24 +112,24 @@
     </section>
 
     <section class="catalog">
-      <h2 class="catalog__title">Smart Device предлагает следующие товары и&nbsp;услуги</h2>
+      <h3 class="catalog__title">Smart Device предлагает следующие товары и&nbsp;услуги</h3>
       <ul class="catalog__list">
         <li class="catalog__item service">
           <a class="service__link">
-            <h3 class="service__title">Производство печатных плат</h3>
-            <button class="service__button"><span class="visually-hidden">Далее</span></button>
+            <h4 class="service__title">Производство печатных плат</h4>
+            <p class="service__button"><span class="visually-hidden">Далее</span></p>
           </a>
         </li>
         <li class="catalog__item service">
           <a class="service__link">
-            <h3 class="service__title">Монтаж печатных плат</h3>
-            <button class="service__button"><span class="visually-hidden">Далее</span></button>
+            <h4 class="service__title">Монтаж печатных плат</h4>
+            <p class="service__button"><span class="visually-hidden">Далее</span></p>
           </a>
         </li>
         <li class="catalog__item service">
           <a class="service__link">
-            <h3 class="service__title">Комплектующие для светотехники</h3>
-            <button class="service__button"><span class="visually-hidden">Далее</span></button>
+            <h4 class="service__title">Комплектующие для светотехники</h4>
+            <p class="service__button"><span class="visually-hidden">Далее</span></p>
           </a>
         </li>
       </ul>
@@ -146,7 +166,7 @@
   <footer class="footer">
     <div class="footer__logo logo">
       <a class="logo__link">
-        <img class="logo__img" src="img/svg/logo.svg">
+        <img class="logo__img" src="img/svg/logo.svg" alt="Логотип компании Smart Device">
         <p class="logo__text">Smart Device <span>умные технологии</span></p>
       </a>
     </div>
@@ -225,18 +245,10 @@
     </div>
   </footer>
 
-</body>
-
-</html>
 
 
-
-
-
-
-
-<!-- Модалки -->
-<!-- <div class="modal modal--preload" data-modal="feedback">
+  <!-- Модалки -->
+  <!-- <div class="modal modal--preload" data-modal="feedback">
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
@@ -264,8 +276,8 @@
       </div>
     </div> -->
 
-<script src="js/vendor.min.js"></script>
-<script src="js/main.min.js"></script>
+  <!-- <script src="js/vendor.min.js"></script>
+<script src="js/main.min.js"></script> -->
 </body>
 
 </html>
