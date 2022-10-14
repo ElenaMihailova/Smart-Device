@@ -7,7 +7,7 @@
 
 // Global
 @import "variables.scss";
-@import "mixins";
+@import "mixins.scss";
 @import "global/fonts";
 @import "global/reboot";
 @import "global/utils";
@@ -18,13 +18,15 @@
 @import "blocks/btn";
 @import "blocks/modal";
 @import "blocks/header.scss";
-@import "blocks/logo";
+@import "blocks/logo.scss";
 @import "blocks/contact.scss";
 @import "blocks/adventage.scss";
 @import "blocks/footer.scss";
 @import "blocks/social.scss";
 @import "blocks/navigation.scss";
 @import "blocks/address.scss";
+@import "blocks/accordion.scss";
+@import "blocks/info.scss";
 
 // ---------------------------------
 

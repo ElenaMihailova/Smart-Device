@@ -19,7 +19,7 @@
       <div class="header__logo logo">
         <a class="logo__link">
           <img class="logo__img" src="img/svg/logo.svg" alt="Логотип компании Smart Device" width="55" height="55">
-          <p class="logo__text">Smart Device <span class="logo__text--sub">умные технологии</span></p>
+          <p class="logo__text">Smart Device <span class="logo__text-sub">умные технологии</span></p>
         </a>
       </div>
       <div class="header__contact contact">
@@ -53,37 +53,42 @@
   <main>
     <h1 class="visually-hidden">Smart Device-электронные комплектующие</h1>
     <section class="info">
-      <h2 class="info__title">Печатные платы</h2>
-      <p class="info__description">Производство и монтаж, поставка комплектующих, блоков и модулей</p>
-      <a class="info__link">Получить бесплатную консультацию</a>
+      <div class="info__wrapper">
+        <h2 class="info__title">Печатные платы</h2>
+        <p class="info__description">Производство и монтаж, поставка комплектующих, блоков и модулей</p>
+        <a class="info__link">
+          <span class="info__text">Получить бесплатную консультацию</span>
+          <span class="info__text-mob">Бесплатная консультация</span>
+        </a>
+      </div>
     </section>
 
-    <section class="adventage">
+    <section class="advantage">
       <h2 class="visually-hidden">Преимущества компании Smart Device</h2>
-      <ul class="adventage__list">
-        <li class="adventage__item">
-          <svg class="adventage__pic">
+      <ul class="advantage__list">
+        <li class="advantage__item">
+          <svg class="advantage__pic">
           </svg>
           <h3 class="advantage__title">Оперативные сроки</h3>
           <p class="advantage__description">Усовершенствованная логистическая система позволяет нам просчитывать
             стоимость, производить и&nbsp;доставлять заказы плат и&nbsp;комплектующих в&nbsp;самые короткие сроки</p>
         </li>
-        <li class="adventage__item">
-          <svg class="adventage__pic">
+        <li class="advantage__item">
+          <svg class="advantage__pic">
           </svg>
           <h3 class="advantage__title">Крупные поставщики</h3>
           <p class="advantage__description">Нашими поставщиками являются такие крупные мировые компании как: OSRAM,
             CREE, HOLGLITRONIC, REFOND. Сотрудничество с&nbsp;такими компаниями обеспечивает хорошее качество нашей
             продукции.</p>
         </li>
-        <li class="adventage__item">
-          <svg class="adventage__pic">
+        <li class="advantage__item">
+          <svg class="advantage__pic">
           </svg>
           <h3 class="advantage__title">Полная конфиденциальность</h3>
           <p class="advantage__description">По&nbsp;желанию клиента мы&nbsp;обеспечиваем полную конфиденциальность.</p>
         </li>
-        <li class="adventage__item">
-          <svg class="adventage__pic">
+        <li class="advantage__item">
+          <svg class="advantage__pic">
           </svg>
           <h3 class="advantage__title">Персонализация стоимости</h3>
           <p class="advantage__description">Мы&nbsp;подбираем определенную фабрику, поставщиков, вид доставки, чтобы
@@ -94,7 +99,7 @@
 
     <section class="about">
       <svg class="about__img"></svg>
-      <h3 class="about__title">О&nbsp;компании</h3>
+      <h2 class="about__title">О&nbsp;компании</h2>
       <p class="about__description">Мы&nbsp;поставляем электронные комплектующие, производим печатные платы
         и&nbsp;предоставляем мировые технологии с&nbsp;1997 года. Выполняем срочные заказы и&nbsp;пилотные образцы
         до&nbsp;10 дней.
@@ -112,23 +117,23 @@
     </section>
 
     <section class="catalog">
-      <h3 class="catalog__title">Smart Device предлагает следующие товары и&nbsp;услуги</h3>
+      <h2 class="catalog__title">Smart Device предлагает следующие товары и&nbsp;услуги</h2>
       <ul class="catalog__list">
         <li class="catalog__item service">
           <a class="service__link">
-            <h4 class="service__title">Производство печатных плат</h4>
+            <h3 class="service__title">Производство печатных плат</h3>
             <p class="service__button"><span class="visually-hidden">Далее</span></p>
           </a>
         </li>
         <li class="catalog__item service">
           <a class="service__link">
-            <h4 class="service__title">Монтаж печатных плат</h4>
+            <h3 class="service__title">Монтаж печатных плат</h3>
             <p class="service__button"><span class="visually-hidden">Далее</span></p>
           </a>
         </li>
         <li class="catalog__item service">
           <a class="service__link">
-            <h4 class="service__title">Комплектующие для светотехники</h4>
+            <h3 class="service__title">Комплектующие для светотехники</h3>
             <p class="service__button"><span class="visually-hidden">Далее</span></p>
           </a>
         </li>
@@ -170,14 +175,15 @@
       <div class="footer__container">
         <div class="footer__logo logo">
           <a class="logo__link">
-            <img class="logo__img" src="img/svg/logo.svg" alt="Логотип компании Smart Device">
-            <p class="logo__text">Smart Device <span>умные технологии</span></p>
+            <img class="logo__img logo__img--footer" src="img/svg/logo.svg" alt="Логотип компании Smart Device">
+            <p class="logo__text logo__text--footer">Smart Device <span class="logo__text-sub">умные технологии</span>
+            </p>
           </a>
         </div>
         <ul class="footer__social social">
           <li class="social__item">
             <a class="social__link social__link--ok" href="#" title="Наш Одноклассники">
-              <svg class="social__link-img" width="30" heught="30" xmlns="http://www.w3.org/2000/svg"
+              <svg class="social__link-img" width="30" height="30" xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 30 30">
                 <path d="M15.17 12.64a2.03 2.03 0 0 0 .02-4.05 2.03 2.03 0 0 0-.02 4.05Z" />
                 <path
@@ -187,7 +193,7 @@
           </li>
           <li class="social__item">
             <a class="social__link social__link--vk" href="#" title="Наш Вконтакте">
-              <svg class="social__link-img" width="30" heught="30" xmlns="http://www.w3.org/2000/svg"
+              <svg class="social__link-img" width="30" height="30" xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 30 30">
                 <path
                   d="M21.62 17.45c-1.24-1.18-1.33-1.18-.27-2.54 1.33-1.73 3.09-3.91 1.5-3.91h-2.9c-.54 0-.63.36-.8.82-.7 1.73-2.12 4-2.65 3.63-.53-.36-.27-1.72-.27-3.9a.72.72 0 0 0-.17-.73c-.18-.18-.44-.37-.7-.37-.45-.09-.89-.18-1.33-.18-1.68 0-2.82.73-2.2.82 1.14.18 1.05 2.73.79 3.82-.44 1.9-2.2-1.46-3-3.18a.87.87 0 0 0-.88-.73h-2.3c-.35 0-.62.1-.62.36 0 .46 2.2 4.91 4.24 7.19 2.03 2.18 4.06 2 5.47 2 .18 0 .35-.1.44-.19a.7.7 0 0 0 .18-.45c0-1.46.53-2.18 1.5-1.18 1.06 1.09 1.32 1.82 2.64 1.82h2.39c.61 0 .79-.19.79-.46.09-.64-.97-1.82-1.85-2.64ZM15.35 0C23.55.18 30.1 7 30 15.27A14.9 14.9 0 0 1 14.9 30 14.98 14.98 0 0 1 0 15 15.19 15.19 0 0 1 15.35 0Z" />
@@ -196,7 +202,7 @@
           </li>
           <li class="social__item">
             <a class="social__link social__link--pn" href="#" title="Наш Пинтерест">
-              <svg class="social__link-img" width="30" heught="30" xmlns="http://www.w3.org/2000/svg"
+              <svg class="social__link-img" width="30" height="30" xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 30 30">
                 <path d="M15 0a15 15 0 1 1 0 30 15 15 0 0 1 0-30Z" />
                 <path
@@ -209,34 +215,44 @@
       </div>
 
       <nav class="footer__nav navigation">
-        <h3 class="navigation__title">Разделы сайта</h3>
-        <ul class="navigation__list">
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">О Компании</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">Продукты</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">Производство печатных плат</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">Монтаж печатных плат</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">Комплектующие</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">Доставка</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">Контакты</a>
-          </li>
-        </ul>
+        <div class="navigation__order">
+          <h3 class="navigation__title">Разделы сайта</h3>
+          <span class="navigation__accordion accordion"></span>
+        </div>
+        <div class="navigation__wrapper">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">О Компании</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">Продукты</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">Производство печатных плат</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">Монтаж печатных плат</a>
+            </li>
+          </ul>
+          <ul class="navigation__sub-list">
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">Комплектующие</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">Доставка</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </div>
       </nav>
 
       <div class="footer__address address">
-        <h3 class="address__title">Наш офис</h3>
+        <div class="address__order">
+          <h3 class="address__title">Наш офис</h3>
+        <span class="address__accordion accordion"></span>
+        </div>
         <ul class="address__list">
           <li class="address__item">
             г. Мытищи, Олимпийский проспект, д.10

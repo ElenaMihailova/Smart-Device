@@ -13,9 +13,13 @@
 .logo__text {
   @include vp-767 {
     display: none;
+
+    &--footer {
+      display: flex;
+    }
   }
 
-  @include vp-1023 {
+  @include vp-1024 {
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -32,19 +36,24 @@
   align-items: flex-start;
   margin: 0;
   margin-left: 15px;
-
-  &--sub {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 14px;
-    color: rgba(255, 255, 255, 0.7);
-  }
 }
 
 .logo__img {
   @include vp-767 {
     width: 35px;
     height: 35px;
+
+    &--footer {
+      width: 55px;
+      height: 55px;
+    }
   }
+}
+
+.logo__text-sub {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: rgba(255, 255, 255, 0.7);
 }

@@ -1,5 +1,5 @@
 .contact__list {
-  @include vp-1023 {
+  @include vp-1024 {
     gap: 20px;
   }
   list-style: none;
@@ -13,7 +13,7 @@
 }
 
 .contact__link {
-  @include vp-1023 {
+  @include vp-1024 {
     padding: 10px;
   }
   display: flex;
@@ -21,7 +21,7 @@
 }
 
 .contact__img {
-  @include vp-1023 {
+  @include vp-1024 {
     margin-right: 0;
   }
   fill: #00b2ff;
@@ -29,7 +29,7 @@
 }
 
 .contact__text {
-  @include vp-1023 {
+  @include vp-1024 {
     display: none;
   }
 
@@ -38,7 +38,7 @@
 }
 
 .contact__item {
-  @include vp-1023 {
+  @include vp-1024 {
     min-width: auto;
   }
   min-width: 225px;

@@ -12,13 +12,19 @@
   }
 }
 
+@mixin vp-1750 {
+  @media (max-width: $vp-1750 - 1) {
+    @content;
+  }
+}
+
 @mixin vp-1600 {
   @media (max-width: $vp-1600 - 1) {
     @content;
   }
 }
 
-@mixin vp-1439 {
+@mixin vp-1440 {
   @media (max-width: $vp-1440 - 1) {
     @content;
   }
@@ -30,12 +36,17 @@
   }
 }
 
-@mixin vp-1023 {
+@mixin vp-1024 {
   @media (max-width: $vp-1024 - 1) {
     @content;
   }
 }
 
+// @mixin vp-770 {
+//   @media (max-width: $vp-771 - 1) {
+//     @content;
+//   }
+// }
 @mixin vp-767 {
   @media (max-width: $vp-768 - 1) {
     @content;
