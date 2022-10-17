@@ -1,0 +1,65 @@
+.checkbox {
+  @include vp-767 {
+    margin-top: 5px;
+  }
+
+  @include vp-1024 {
+    margin-left: 0;
+    margin-top: 18px;
+  }
+
+  margin: 0;
+  margin-top: 30px;
+  margin-left: 10px;
+}
+
+.checkbox__label {
+  @include vp-767 {
+    align-items: flex-start;
+  }
+
+  display: flex;
+  align-items: center;
+}
+
+.checkbox__text {
+  font-family: "PT Mono", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  opacity: 0.8;
+  text-align: left;
+}
+
+.checkbox__button {
+  @include vp-767 {
+    margin-top: 5px;
+    margin-right: 12px;
+    margin-left: 4px;
+  }
+
+  flex: 0 0 15px;
+  height: 15px;
+  border: 1px solid #ffffff;
+  border-radius: 2px;
+  margin-right: 11px;
+  position: relative;
+  cursor: pointer;
+}
+
+.checkbox__button::before {
+  position: absolute;
+  content: "";
+  width: 14px;
+  height: 14px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='9' height='6' viewBox='0 0 9 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0.988525 2.33382L3.7778 5.00049L7.96171 1.00049' stroke='white'/%3e%3c/svg%3e");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: none;
+}
+
+.checkbox__input:checked + .checkbox__button::before {
+  display: block;
+}

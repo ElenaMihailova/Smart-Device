@@ -1,6 +1,13 @@
 .catalog {
+  @include vp-767 {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 48px;
+    padding-bottom: 86px;
+  }
+
   @include vp-1024 {
-    padding-top: 60px;
+    padding-top: 55px;
     padding-bottom: 75px;
   }
 
@@ -14,6 +21,17 @@
 }
 
 .catalog__title {
+  @include vp-767 {
+    font-size: 28px;
+    line-height: 39px;
+    margin-right: 20px;
+    margin-bottom: 29px;
+  }
+
+  @include vp-1024 {
+    margin-bottom: 37px;
+  }
+
   font-family: "Roboto Condensed", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -26,6 +44,10 @@
 }
 
 .catalog__list {
+  @include vp-1024 {
+    flex-direction: column;
+  }
+
   @include vp-1600 {
     gap: 30px;
   }
@@ -36,4 +58,20 @@
   display: flex;
   flex-wrap: wrap;
   gap: 85px;
+}
+
+.catalog__text--mob {
+  @include vp-767 {
+    display: block;
+  }
+
+  display: none;
+}
+
+.catalog__text--tablet {
+  @include vp-767 {
+    display: none;
+  }
+
+  display: block;
 }

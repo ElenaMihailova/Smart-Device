@@ -1,4 +1,8 @@
 .header {
+  @include vp-1024 {
+    position: relative;
+  }
+
   @include vp-1600 {
     padding-left: 20px;
     padding-right: 20px;
@@ -10,7 +14,9 @@
   padding-right: 350px;
   padding-bottom: 35px;
   z-index: 2;
-  position: sticky;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .header__wrapper {
@@ -62,15 +68,19 @@
   padding: 10px 15px;
   border: 1px solid #f2f5f7;
   border-radius: 3px;
+  cursor: pointer;
 }
 
-//   @include vp-1023 {
-//     padding: 0 24px;
-//   }
+.header__button:hover {
+  border: 1px solid #00b2ff;
+  color: #00b2ff;
+}
 
-//   @include vp-767 {
-//     padding: 0 16px;
-//   }
+.header__button:active {
+  border: 1px solid #00b2ff;
+  color: #00b2ff;
+  background-color: #f2f5f7;
+}
 
 .header__contact {
   @include vp-1024 {

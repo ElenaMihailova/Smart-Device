@@ -7,6 +7,7 @@
   @include vp-1024 {
     padding-left: 48px;
     padding-right: 50px;
+    padding-bottom: 80px;
   }
 
   @include vp-1600 {
@@ -116,6 +117,7 @@
   border-radius: 3px;
   background-color: inherit;
   margin-top: 19px;
+  cursor: pointer;
 }
 
 .about__img {

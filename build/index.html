@@ -113,7 +113,8 @@
           до&nbsp;10 дней.</p>
         <p class="about__description">
           Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.
-          <span class="about__description-sub">Печатные платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях Российских Железных Дорог
+          <span class="about__description-sub">Печатные платы и&nbsp;комплектующие Service Devices применяются
+            на&nbsp;предприятиях Российских Железных Дорог
             (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители
             светотехники России.</span>
         </p>
@@ -128,7 +129,9 @@
 
     <section class="catalog">
       <div class="catalog__wrapper">
-        <h2 class="catalog__title">Smart Device предлагает следующие товары и&nbsp;услуги</h2>
+        <h2 class="catalog__title"><span class="catalog__text catalog__text--tablet">Smart Device предлагает следующие
+            товары
+            и&nbsp;услуги</span> <span class="catalog__text catalog__text--mob">Товары и услуги Smart Device</span></h2>
         <ul class="catalog__list">
           <li class="catalog__item service">
             <a class="service__link">
@@ -150,31 +153,38 @@
     </section>
 
     <section class="form">
-      <h2 class="visually-hidden">Форма обратной связи</h2>
-      <h3 class="form__title">Остались вопросы? Задайте их нам!</h3>
-      <p class="form__description">Мы проконсультируем Вас бесплатно</p>
-      <form action="#" method="get">
-        <p>
-          <label class="visually-hidden">Заполните имя</label>
-          <input class="form__input" type="text" name="name" placeholder="Имя" required>
-        </p>
-        <p>
-          <label class="visually-hidden">Заполните номер телефона</label>
-          <input class="form__input" type="tel" name="tel" placeholder="Телефон" required>
-        </p>
-        <p>
-          <label class="visually-hidden">Задайте вопрос</label>
-          <textarea class="form__input" placeholder="Ваш вопрос" rows="10" cols="20">
-          </textarea>
-        </p>
-        <p>
-          <label>
-            <input type="checkbox">
-            <span>Я согласен на обработку персональных данных</span>
-          </label>
-        </p>
-        <button class="form__button" type="submit">Задать вопрос</button>
-      </form>
+      <div class="form__background">
+        <h2 class="visually-hidden">Форма обратной связи</h2>
+        <div class="form__img-wrap">
+          <img class="form__img" src="/img/svg/paper-airplane.svg" alt="Бумажный самолетик." width="510" height="285">
+        </div>
+        <div class="form__order">
+          <h3 class="form__title">Остались вопросы? Задайте их нам!</h3>
+          <p class="form__description">Мы проконсультируем Вас бесплатно</p>
+          <form class="form__container" action="#" method="get">
+            <p class="form__input-wrapper">
+              <label class="visually-hidden">Заполните имя</label>
+              <input class="form__input" type="text" name="name" placeholder="Имя" required>
+            </p>
+            <p class="form__input-wrapper">
+              <label class="visually-hidden">Заполните номер телефона</label>
+              <input class="form__input" type="tel" name="tel" placeholder="Телефон" required>
+            </p>
+            <p class="form__text-area">
+              <label class="visually-hidden">Задайте вопрос</label>
+              <textarea class="form__input" placeholder="Ваш вопрос"></textarea>
+            </p>
+            <button class="form__button" type="submit">Задать вопрос</button>
+            <p class="form__checkbox checkbox">
+              <label class="checkbox__label">
+                <input class="visually-hidden checkbox__input" type="checkbox">
+                <span class="checkbox__button"></span>
+                <span class="checkbox__text">Я согласен на обработку персональных данных</span>
+              </label>
+            </p>
+          </form>
+        </div>
+      </div>
     </section>
   </main>
 
@@ -280,9 +290,50 @@
     </div>
   </footer>
 
+  <!-- Модальное окно -->
+  <!-- основно блок -->
+  <div class="modal modal--preload" data-modal="feedback">
+    <!-- для центрирования окна -->
+    <div class="modal__wrapper">
+      <!-- для прокрутки -->
+      <div class="modal__overlay" data-close-modal></div>
+      <!-- контент -->
+      <div class="modal__content">
+        <h2 class="modal__title">Закажите звонок</h2>
+        <p class="modal__description">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+        <form class="modal__container form form--modal" action="#" method="get">
+          <p class="form__input-wrapper">
+            <label class="visually-hidden">Заполните имя</label>
+            <input class="form__input" type="text" name="name" placeholder="Имя" required>
+          </p>
+          <p class="form__input-wrapper">
+            <label class="visually-hidden">Заполните номер телефона</label>
+            <input class="form__input" type="tel" name="tel" placeholder="Телефон" required>
+          </p>
+          <p class="form__text-area">
+            <label class="visually-hidden">Задайте вопрос</label>
+            <textarea class="form__input" placeholder="Ваш вопрос"></textarea>
+          </p>
+          <button class="form__button" type="submit">Отправить</button>
+          <p class="form__checkbox checkbox">
+            <label class="checkbox__label">
+              <input class="visually-hidden checkbox__input" type="checkbox">
+              <span class="checkbox__button"></span>
+              <span class="checkbox__text">Я согласен на обработку персональных данных</span>
+            </label>
+          </p>
+        </form>
+
+        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+          <svg width="15" height="15">
+            <use xlink:href="img/sprite_auto.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
 
 
-  <!-- Модалки -->
   <!-- <div class="modal modal--preload" data-modal="feedback">
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
@@ -311,8 +362,8 @@
       </div>
     </div> -->
 
-  <!-- <script src="js/vendor.min.js"></script>
-<script src="js/main.min.js"></script> -->
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
 </body>
 
 </html>

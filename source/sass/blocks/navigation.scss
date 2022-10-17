@@ -61,6 +61,15 @@
   text-align: left;
 }
 
+.navigation__link:hover {
+  color: #00b2ff;
+}
+
+.navigation__link:active {
+  color: #00b2ff;
+  border-bottom: 2px solid #00b2ff;
+}
+
 .navigation__item {
   width: 220px;
   margin-bottom: 10px;
