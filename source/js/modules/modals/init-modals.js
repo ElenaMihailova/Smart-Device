@@ -1,4 +1,4 @@
-import {Modals} from './modals';
+import { Modals } from './modals';
 
 let modals;
 
@@ -14,7 +14,7 @@ let modals;
 // },
 
 const settings = {
-  'default': {
+  default: {
     preventDefault: true,
     stopPlay: true,
     lockFocus: true,
@@ -38,4 +38,4 @@ const initModals = () => {
   window.modals = modals;
 };
 
-export {modals, initModals};
+export { modals, initModals };

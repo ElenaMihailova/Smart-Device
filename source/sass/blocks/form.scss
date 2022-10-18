@@ -58,7 +58,7 @@
     margin-bottom: 6px;
   }
 
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
@@ -149,7 +149,7 @@
     margin-right: 55px;
   }
 
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -170,6 +170,15 @@
   cursor: pointer;
 }
 
+.form__button:hover {
+  background-color: #3abcf3;
+}
+
+.form__button:active {
+  background-color: #3abcf3;
+  outline: 2px solid #ffffff;
+}
+
 .form__checkbox-wrapper {
   margin: 0;
 }
@@ -187,7 +196,7 @@
     padding-top: 13px;
   }
 
-  font-family: "PT Mono", sans-serif;
+  font-family: 'PT Mono', sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
@@ -196,6 +205,8 @@
   background: rgba(4, 20, 39, 0.15);
   border-radius: 3px;
   cursor: pointer;
+  outline: none;
+  color: #ffffff;
 }
 
 .form__input::placeholder {
@@ -210,7 +221,11 @@
   padding-top: 10px;
 }
 
+.form__input:hover {
+  outline: 2px solid #ffffff;
+}
+
 .form__input:active {
-  border: none;
-  outline: #00b3ff;
+  outline: 2px solid #ffffff;
+  color: #ffffff;
 }

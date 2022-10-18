@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preload" href="RobotoCondensed-Regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="RobotoCondensed-Bold.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="PTMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="Roboto-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="RobotoCondensed-Regular.woff2" as="font" type="/font/woff2" crossorigin>
+  <link rel="preload" href="RobotoCondensed-Bold.woff2" as="font" type="/font/woff2" crossorigin>
+  <link rel="preload" href="PTMono-Regular.woff2" as="font" type="/font/woff2" crossorigin>
+  <link rel="preload" href="Roboto-Medium.woff2" as="font" type="/font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.min.css" />
   <title>Smart Device</title>
 </head>
@@ -56,7 +56,7 @@
       <div class="info__wrapper">
         <h2 class="info__title">Печатные платы</h2>
         <p class="info__description">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-        <a class="info__link">
+        <a class="info__link" href="#form">
           <span class="info__text">Получить бесплатную консультацию</span>
           <span class="info__text-mob">Бесплатная консультация</span>
         </a>
@@ -153,7 +153,7 @@
     </section>
 
     <section class="form">
-      <div class="form__background">
+      <div class="form__background" id="form">
         <h2 class="visually-hidden">Форма обратной связи</h2>
         <div class="form__img-wrap">
           <img class="form__img" src="/img/svg/paper-airplane.svg" alt="Бумажный самолетик." width="510" height="285">
@@ -168,7 +168,7 @@
             </p>
             <p class="form__input-wrapper">
               <label class="visually-hidden">Заполните номер телефона</label>
-              <input class="form__input" type="tel" name="tel" placeholder="Телефон" required>
+              <input class="form__input" type="tel" name="tel" placeholder="Телефон" required maxlength="10" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}">
             </p>
             <p class="form__text-area">
               <label class="visually-hidden">Задайте вопрос</label>
@@ -177,7 +177,7 @@
             <button class="form__button" type="submit">Задать вопрос</button>
             <p class="form__checkbox checkbox">
               <label class="checkbox__label">
-                <input class="visually-hidden checkbox__input" type="checkbox">
+                <input class="visually-hidden checkbox__input" type="checkbox" required>
                 <span class="checkbox__button"></span>
                 <span class="checkbox__text">Я согласен на обработку персональных данных</span>
               </label>
@@ -304,7 +304,7 @@
         <form class="modal__container form form--modal" action="#" method="get">
           <p class="form__input-wrapper">
             <label class="visually-hidden">Заполните имя</label>
-            <input class="form__input" type="text" name="name" placeholder="Имя" required>
+            <input class="form__input" type="text" name="name" placeholder="Имя" id="input-modal-name" required autofocus>
           </p>
           <p class="form__input-wrapper">
             <label class="visually-hidden">Заполните номер телефона</label>
@@ -317,15 +317,15 @@
           <button class="form__button" type="submit">Отправить</button>
           <p class="form__checkbox checkbox">
             <label class="checkbox__label">
-              <input class="visually-hidden checkbox__input" type="checkbox">
+              <input class="visually-hidden checkbox__input" type="checkbox" required>
               <span class="checkbox__button"></span>
               <span class="checkbox__text">Я согласен на обработку персональных данных</span>
             </label>
           </p>
         </form>
 
-        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-          <svg width="15" height="15">
+        <button class="modal__close btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+          <svg class="modal__close-img" width="15" height="15">
             <use xlink:href="img/sprite_auto.svg#icon-close"></use>
           </svg>
         </button>

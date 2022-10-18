@@ -113,6 +113,19 @@
   cursor: pointer;
 }
 
+.info__link:hover {
+  background-color: #019bdf;
+}
+
+.info__link:active {
+  background-color: $color-whisper;
+}
+
+.info__link:active .info__text,
+.info__link:active .info__text-mob {
+  color: #00b2ff;
+}
+
 .info__text-mob {
   @include vp-767 {
     display: block;
