@@ -1,37 +1,37 @@
 // Vendor
 // ---------------------------------
 
-@import "vendor/normalize";
+@import 'vendor/normalize';
 // Swiper 7.4.1
 // @import "vendor/swiper";
 
 // Global
-@import "variables.scss";
-@import "mixins.scss";
-@import "global/fonts";
-@import "global/reboot";
-@import "global/utils";
-@import "global/container";
-@import "global/common";
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'global/fonts';
+@import 'global/reboot';
+@import 'global/utils';
+@import 'global/common';
 
 // Blocks
-@import "blocks/btn";
-@import "blocks/modal";
-@import "blocks/header.scss";
-@import "blocks/logo.scss";
-@import "blocks/contact.scss";
-@import "blocks/advantage.scss";
-@import "blocks/footer.scss";
-@import "blocks/social.scss";
-@import "blocks/navigation.scss";
-@import "blocks/address.scss";
-@import "blocks/accordion.scss";
-@import "blocks/info.scss";
-@import "blocks/about.scss";
-@import "blocks/catalog.scss";
-@import "blocks/service.scss";
-@import "blocks/form.scss";
-@import "blocks/checkbox.scss";
+@import 'blocks/btn';
+@import 'blocks/modal';
+@import 'blocks/header.scss';
+@import 'blocks/logo.scss';
+@import 'blocks/contact.scss';
+@import 'blocks/advantage.scss';
+@import 'blocks/footer.scss';
+@import 'blocks/social.scss';
+@import 'blocks/navigation.scss';
+@import 'blocks/address.scss';
+@import 'blocks/accordion.scss';
+@import 'blocks/info.scss';
+@import 'blocks/about.scss';
+@import 'blocks/catalog.scss';
+@import 'blocks/service.scss';
+@import 'blocks/form.scss';
+@import 'blocks/checkbox.scss';
+@import 'blocks/nojs.scss';
 
 // ---------------------------------
 

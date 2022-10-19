@@ -1,6 +1,8 @@
 import { iosVhFix } from './utils/ios-vh-fix';
 import { initModals } from './modules/modals/init-modals';
 
+document.querySelector('.nojs').classList.remove('nojs');
+
 window.addEventListener('DOMContentLoaded', () => {
   iosVhFix();
   window.addEventListener('load', () => {
@@ -61,11 +63,45 @@ const closeModal = () => {
 
 closeModal();
 
-// const popup = document.querySelector('.navigation__wrapper');
-// var openPopupButton = document.querySelector('.accordion');
+function showMoreText() {
+  const btn = document.querySelector('.about__button');
+  const moreText = document.querySelector('.about__description-more');
 
-// openPopupButton.addEventListener('click', function (evt) {
-//   evt.preventDefault();
-//   popup.classList.remove('navigation__wrapper');
-//   popup.classList.add('opened');
-// });
+  if (!moreText.classList.contains('about__description--opened')) {
+    btn.textContent = 'Свернуть';
+    moreText.classList.add('about__description--opened');
+  } else {
+    btn.textContent = 'Подробнее';
+    moreText.classList.remove('about__description--opened');
+  }
+}
+
+document
+  .querySelector('.about__button')
+  .addEventListener('click', showMoreText);
+
+document.addEventListener('DOMContentLoaded', () => {
+  const elements = document.querySelectorAll('[data-mask="phone"]');
+  if (!elements) {
+    return;
+  }
+  const phoneOptions = {
+    mask: '+{7}(000)000-00-00',
+  };
+  elements.forEach((el) => {
+    IMask(el, phoneOptions);
+  });
+});
+
+function addAccordionListener(accordionItemElement) {
+  const buttonElement =
+    accordionItemElement.querySelector('.accordion__button');
+  buttonElement.addEventListener('click', () => {
+    accordionItemElement.classList.add('accordion__item--opened');
+  });
+}
+
+addAccordionListener(document.querySelector('.footer__nav.accordion__item'));
+addAccordionListener(
+  document.querySelector('.footer__address.accordion__item')
+);

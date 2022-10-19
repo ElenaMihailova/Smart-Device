@@ -56,8 +56,8 @@
   @include vp-767 {
     font-size: 14px;
     line-height: 19px;
-    margin-bottom: 14px;
-    margin-top: 3px;
+    margin-bottom: 16px;
+    // margin-top: 3px;
   }
 
   @include vp-1024 {
@@ -129,4 +129,18 @@
     align-self: flex-start;
     padding-top: 5px;
   }
+}
+
+.about__description-more {
+  display: none;
+  text-align: left;
+}
+
+.about__description-moresub {
+  margin-top: 25px;
+  display: block;
+}
+
+.about__description--opened {
+  display: block;
 }

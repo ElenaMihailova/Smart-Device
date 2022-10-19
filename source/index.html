@@ -13,7 +13,7 @@
   <title>Smart Device</title>
 </head>
 
-<body class="page__body container">
+<body>
   <header class="header">
     <div class="header__wrapper">
       <div class="header__logo logo">
@@ -67,7 +67,7 @@
       <h2 class="visually-hidden">Преимущества компании Smart Device</h2>
       <div class="advantage__wrapper">
         <ul class="advantage__list">
-          <li class="advantage__item advantage__item--active">
+          <li class="advantage__item advantage__item--activ advantage__item--long">
             <svg class="advantage__pic" width="35" height="35" viewBox="0 0 35 35">
               <use xlink:href="img/sprite/sprite.svg#watch"></use>
             </svg>
@@ -75,7 +75,7 @@
             <p class="advantage__description">Усовершенствованная логистическая система позволяет нам просчитывать
               стоимость, производить и&nbsp;доставлять заказы плат и&nbsp;комплектующих в&nbsp;самые короткие сроки</p>
           </li>
-          <li class="advantage__item">
+          <li class="advantage__item advantage__item--long">
             <svg class="advantage__pic" width="35" height="35" viewBox="0 0 35 35">
               <use xlink:href="img/sprite/sprite.svg#suppliers"></use>
             </svg>
@@ -89,7 +89,7 @@
               <use xlink:href="img/sprite/sprite.svg#detective"></use>
             </svg>
             <h3 class="advantage__title">Полная конфиденциальность</h3>
-            <p class="advantage__description">По&nbsp;желанию клиента мы&nbsp;обеспечиваем полную конфиденциальность.
+            <p class="advantage__description">По&nbsp;желанию клиента мы обеспечиваем полную конфиденциальность.
             </p>
           </li>
           <li class="advantage__item">
@@ -107,22 +107,33 @@
     <section class="about">
       <img class="about__img" src="img/svg/year.svg" alt="Текущий год." width="150" height="320">
       <div class="about__wrapper">
-        <h2 class="about__title">О&nbsp;компании</h2>
-        <p class="about__description">Мы&nbsp;поставляем электронные комплектующие, производим печатные платы
-          и&nbsp;предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы
-          до&nbsp;10 дней.</p>
-        <p class="about__description">
-          Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.
-          <span class="about__description-sub">Печатные платы и&nbsp;комплектующие Service Devices применяются
-            на&nbsp;предприятиях Российских Железных Дорог
-            (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители
-            светотехники России.</span>
-        </p>
-        <p class="about__description-more">Smart Device&nbsp;&mdash; это команда профессионалов. Через
-          нас прошло более 1&nbsp;000&nbsp;000 клиентов, 70% из&nbsp;которых продолжают сотрудничество по&nbsp;сей день.
-          На&nbsp;данный момент насчитывается более 14 офисов по&nbsp;всей стране и&nbsp;20 городов присутствия.
-          Мы&nbsp;стремимся к&nbsp;постоянному развитию и&nbsp;повышению уровня качества продукции, производимой внутри
-          компании. Использование инновационных технологий помогает экономить деньги и&nbsp;время наших клиентов.</p>
+        <div class="about__content">
+          <h2 class="about__title">О&nbsp;компании</h2>
+          <p class="about__description">Мы&nbsp;поставляем электронные комплектующие, производим печатные платы
+            и&nbsp;предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы
+            до&nbsp;10 дней.</p>
+          <p class="about__description">
+            Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC,
+            REFOND.
+            <span class="about__description-sub">Печатные платы и&nbsp;комплектующие Service Devices применяются
+              на&nbsp;предприятиях Российских Железных Дорог
+              (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие
+              Производители
+              светотехники России.</span>
+          </p>
+          <p class="about__description-more">Smart Device&nbsp;&mdash; это команда профессионалов. Через
+            нас прошло более 1&nbsp;000&nbsp;000 клиентов, 70% из&nbsp;которых продолжают сотрудничество по&nbsp;сей
+            день.
+            На&nbsp;данный момент насчитывается более 14 офисов по&nbsp;всей стране и&nbsp;20 городов присутствия.<br>
+            <span class="about__description-moresub">
+              Мы&nbsp;стремимся к&nbsp;постоянному развитию и&nbsp;повышению уровня качества продукции, производимой
+              внутри
+              компании. Использование инновационных технологий помогает экономить деньги и&nbsp;время наших клиентов.
+            </span>
+          </p>
+
+        </div>
+
         <button class="about__button">Подробнее</button>
       </div>
     </section>
@@ -156,7 +167,10 @@
       <div class="form__background" id="form">
         <h2 class="visually-hidden">Форма обратной связи</h2>
         <div class="form__img-wrap">
-          <img class="form__img" src="/img/svg/paper-airplane.svg" alt="Бумажный самолетик." width="510" height="285">
+          <picture>
+            <source type="image/webp" srcset="/img/paper-airplane.webp, /img/paper-airplane@2.webp 2x">
+            <img class="form__img" src="/img/paper-airplane.png" srcset="/img/paper-airplane@2.png"  alt="Бумажный самолетик." width="510" height="285">
+          </picture>
         </div>
         <div class="form__order">
           <h3 class="form__title">Остались вопросы? Задайте их нам!</h3>
@@ -168,8 +182,8 @@
             </p>
             <p class="form__input-wrapper">
               <label class="visually-hidden">Заполните номер телефона</label>
-              <input class="form__input" type="tel" name="tel" placeholder="Телефон" required maxlength="10"
-                pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}">
+              <input class="form__input" type="tel" name="tel" placeholder="Телефон" required
+              data-mask="phone">
             </p>
             <p class="form__text-area">
               <label class="visually-hidden">Задайте вопрос</label>
@@ -195,7 +209,8 @@
       <div class="footer__container">
         <div class="footer__logo logo">
           <a class="logo__link">
-            <img class="logo__img logo__img--footer" src="img/svg/logo.svg" alt="Логотип компании Smart Device">
+            <img class="logo__img logo__img--footer" src="img/svg/logo.svg" alt="Логотип компании Smart Device"
+              width="55" height="55">
             <p class="logo__text logo__text--footer">Smart Device <span class="logo__text-sub">умные технологии</span>
             </p>
           </a>
@@ -234,13 +249,13 @@
         </ul>
       </div>
 
-      <div class="footer__order">
-        <nav class="footer__nav navigation">
+      <div class="footer__order accordion">
+        <nav class="footer__nav navigation accordion__item">
           <div class="navigation__order">
             <h3 class="navigation__title">Разделы сайта</h3>
-            <span class="navigation__accordion accordion"></span>
+            <span class="navigation__accordion accordion__button"></span>
           </div>
-          <div class="navigation__wrapper">
+          <div class="navigation__wrapper accordion__content">
             <ul class="navigation__list">
               <li class="navigation__item">
                 <a class="navigation__link" href="#">О Компании</a>
@@ -269,12 +284,12 @@
           </div>
         </nav>
 
-        <div class="footer__address address">
+        <div class="footer__address address accordion__item">
           <div class="address__order">
             <h3 class="address__title">Наш офис</h3>
-            <span class="address__accordion accordion"></span>
+            <span class="address__accordion accordion__button"></span>
           </div>
-          <ul class="address__list">
+          <ul class="address__list  accordion__content">
             <li class="address__item">
               г. Мытищи, Олимпийский проспект, д.10
             </li>
@@ -312,7 +327,7 @@
           </p>
           <p class="form__input-wrapper">
             <label class="visually-hidden">Заполните номер телефона</label>
-            <input class="form__input" type="tel" name="tel" placeholder="Телефон" required>
+            <input class="form__input" type="tel" name="tel" placeholder="Телефон" data-mask="phone" required>
           </p>
           <p class="form__text-area">
             <label class="visually-hidden">Задайте вопрос</label>
@@ -336,37 +351,7 @@
       </div>
     </div>
   </div>
-
-
-  <!-- <div class="modal modal--preload" data-modal="feedback">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite_auto.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite_auto.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div> -->
-
-  <script src="js/vendor.min.js"></script>
+  <script src="https://unpkg.com/imask"></script>
   <script src="js/main.min.js"></script>
 </body>
 

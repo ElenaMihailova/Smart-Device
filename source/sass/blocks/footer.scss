@@ -18,11 +18,6 @@
     justify-content: space-between;
   }
 
-  @include vp-1750 {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
   display: flex;
   flex-wrap: wrap;
   padding-top: 50px;
