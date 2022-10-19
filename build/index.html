@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preload" href="RobotoCondensed-Regular.woff2" as="font" type="/font/woff2" crossorigin>
-  <link rel="preload" href="RobotoCondensed-Bold.woff2" as="font" type="/font/woff2" crossorigin>
-  <link rel="preload" href="PTMono-Regular.woff2" as="font" type="/font/woff2" crossorigin>
-  <link rel="preload" href="Roboto-Medium.woff2" as="font" type="/font/woff2" crossorigin>
+  <link rel="preload" href="RobotoCondensed-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="RobotoCondensed-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="PTMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="Roboto-Medium.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.min.css" />
   <title>Smart Device</title>
 </head>
@@ -118,12 +118,12 @@
             (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители
             светотехники России.</span>
         </p>
-        <button class="about__button">Подробнее</button>
         <p class="about__description-more">Smart Device&nbsp;&mdash; это команда профессионалов. Через
           нас прошло более 1&nbsp;000&nbsp;000 клиентов, 70% из&nbsp;которых продолжают сотрудничество по&nbsp;сей день.
           На&nbsp;данный момент насчитывается более 14 офисов по&nbsp;всей стране и&nbsp;20 городов присутствия.
           Мы&nbsp;стремимся к&nbsp;постоянному развитию и&nbsp;повышению уровня качества продукции, производимой внутри
           компании. Использование инновационных технологий помогает экономить деньги и&nbsp;время наших клиентов.</p>
+        <button class="about__button">Подробнее</button>
       </div>
     </section>
 
@@ -168,7 +168,8 @@
             </p>
             <p class="form__input-wrapper">
               <label class="visually-hidden">Заполните номер телефона</label>
-              <input class="form__input" type="tel" name="tel" placeholder="Телефон" required maxlength="10" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}">
+              <input class="form__input" type="tel" name="tel" placeholder="Телефон" required maxlength="10"
+                pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}">
             </p>
             <p class="form__text-area">
               <label class="visually-hidden">Задайте вопрос</label>
@@ -233,59 +234,62 @@
         </ul>
       </div>
 
-      <nav class="footer__nav navigation">
-        <div class="navigation__order">
-          <h3 class="navigation__title">Разделы сайта</h3>
-          <span class="navigation__accordion accordion"></span>
-        </div>
-        <div class="navigation__wrapper">
-          <ul class="navigation__list">
-            <li class="navigation__item">
-              <a class="navigation__link" href="#">О Компании</a>
-            </li>
-            <li class="navigation__item">
-              <a class="navigation__link" href="#">Продукты</a>
-            </li>
-            <li class="navigation__item">
-              <a class="navigation__link" href="#">Производство печатных плат</a>
-            </li>
-            <li class="navigation__item">
-              <a class="navigation__link" href="#">Монтаж печатных плат</a>
-            </li>
-          </ul>
-          <ul class="navigation__sub-list">
-            <li class="navigation__item">
-              <a class="navigation__link" href="#">Комплектующие</a>
-            </li>
-            <li class="navigation__item">
-              <a class="navigation__link" href="#">Доставка</a>
-            </li>
-            <li class="navigation__item">
-              <a class="navigation__link" href="#">Контакты</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <div class="footer__order">
+        <nav class="footer__nav navigation">
+          <div class="navigation__order">
+            <h3 class="navigation__title">Разделы сайта</h3>
+            <span class="navigation__accordion accordion"></span>
+          </div>
+          <div class="navigation__wrapper">
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">О Компании</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">Продукты</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">Производство печатных плат</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">Монтаж печатных плат</a>
+              </li>
+            </ul>
+            <ul class="navigation__sub-list">
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">Комплектующие</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">Доставка</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
 
-      <div class="footer__address address">
-        <div class="address__order">
-          <h3 class="address__title">Наш офис</h3>
-          <span class="address__accordion accordion"></span>
+        <div class="footer__address address">
+          <div class="address__order">
+            <h3 class="address__title">Наш офис</h3>
+            <span class="address__accordion accordion"></span>
+          </div>
+          <ul class="address__list">
+            <li class="address__item">
+              г. Мытищи, Олимпийский проспект, д.10
+            </li>
+            <li class="address__item address__item--tel">
+              +7 (495) 589-40-50
+            </li>
+            <li class="address__item address__item--tel">
+              +7 (925) 389-58-29
+            </li>
+            <li class="address__item address__item--tel">
+              +7 (925) 364-78-13
+            </li>
+          </ul>
         </div>
-        <ul class="address__list">
-          <li class="address__item">
-            г. Мытищи, Олимпийский проспект, д.10
-          </li>
-          <li class="address__item address__item--tel">
-            +7 (495) 589-40-50
-          </li>
-          <li class="address__item address__item--tel">
-            +7 (925) 389-58-29
-          </li>
-          <li class="address__item address__item--tel">
-            +7 (925) 364-78-13
-          </li>
-        </ul>
+
       </div>
     </div>
   </footer>
@@ -304,7 +308,7 @@
         <form class="modal__container form form--modal" action="#" method="get">
           <p class="form__input-wrapper">
             <label class="visually-hidden">Заполните имя</label>
-            <input class="form__input" type="text" name="name" placeholder="Имя" id="input-modal-name" required autofocus>
+            <input class="form__input" type="text" name="name" placeholder="Имя" id="input-modal-name" required>
           </p>
           <p class="form__input-wrapper">
             <label class="visually-hidden">Заполните номер телефона</label>

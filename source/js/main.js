@@ -8,22 +8,22 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// /* Источник - https://proweb63.ru/help/js/smooth-scroll-by-js */
-// const smoothLinks = document.querySelectorAll('a[href="#"]');
-// for (let smoothLink of smoothLinks) {
-//   smoothLink.addEventListener('click', function (e) {
-//     e.preventDefault();
-//     const id = smoothLink.getAttribute('href');
+/* Источник - https://proweb63.ru/help/js/smooth-scroll-by-js */
+const smoothLinks = document.querySelectorAll('a[href="#"]');
+for (let smoothLink of smoothLinks) {
+  smoothLink.addEventListener('click', function (e) {
+    e.preventDefault();
+    const id = smoothLink.getAttribute('href');
 
-//     document.querySelector(id).scrollIntoView({
-//       behavior: 'smooth',
-//       block: 'start',
-//     });
-//   });
-// }
+    document.querySelector(id).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  });
+}
 
 /* Источник - https://frontips.ru/variant-modalnyh-okon-na-javascript */
-const openModal = (triggerSelector, modalDataSelector) => {
+const openModal = (triggerSelector, modalDataSelector, onModalOpened) => {
   const trigger = document.querySelector(triggerSelector);
   const modal = document.querySelector(modalDataSelector);
   if (!trigger || !modal) {
@@ -32,21 +32,15 @@ const openModal = (triggerSelector, modalDataSelector) => {
   trigger.addEventListener('click', (elem) => {
     elem.preventDefault();
     modal.classList.add('modal--active');
+    if (onModalOpened) {
+      onModalOpened();
+    }
   });
 };
 
-const inputFocus = (param1, param2) => {
-  document.querySelector(param1).onload = function () {
-    document.getElementById(param2).focus();
-  };
-};
-
-openModal('.header__button', '.modal');
-inputFocus('.modal', 'input-modal-name');
-
-// document.querySelector('.modal').onload = function () {
-//   document.getElementById('input-modal-name').focus();
-// };
+openModal('.header__button', '.modal', () => {
+  setTimeout(() => document.getElementById('input-modal-name').focus(), 100);
+});
 
 const closeModal = () => {
   const modals = document.querySelectorAll('.modal');
@@ -66,3 +60,12 @@ const closeModal = () => {
 };
 
 closeModal();
+
+// const popup = document.querySelector('.navigation__wrapper');
+// var openPopupButton = document.querySelector('.accordion');
+
+// openPopupButton.addEventListener('click', function (evt) {
+//   evt.preventDefault();
+//   popup.classList.remove('navigation__wrapper');
+//   popup.classList.add('opened');
+// });

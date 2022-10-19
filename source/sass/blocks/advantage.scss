@@ -63,7 +63,7 @@
     margin-bottom: 8px;
   }
 
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -83,7 +83,7 @@
 
   margin: 0;
   text-align: left;
-  font-family: "PT Mono", sans-serif;
+  font-family: 'PT Mono', sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 135%;
@@ -132,18 +132,34 @@
   margin-bottom: 23px;
 }
 
-.advantage__item--active .advantage__pic {
-  fill: #f2f5f6;
-}
+// .advantage__item--active .advantage__pic {
+//   fill: #f2f5f6;
+// }
 
-.advantage__item--active {
+// .advantage__item--active {
+//   background-color: #00b2ff;
+// }
+
+// .advantage__item--active .advantage__description {
+//   color: #f2f5f7;
+// }
+
+// .advantage__item--active .advantage__title {
+//   color: #f2f5f7;
+// }
+
+.advantage__item:hover {
   background-color: #00b2ff;
 }
 
-.advantage__item--active .advantage__description {
+.advantage__item:hover .advantage__title {
   color: #f2f5f7;
 }
 
-.advantage__item--active .advantage__title {
+.advantage__item:hover .advantage__pic {
+  fill: #f2f5f6;
+}
+
+.advantage__item:hover .advantage__description {
   color: #f2f5f7;
 }
