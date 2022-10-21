@@ -56,7 +56,7 @@
       <div class="info__wrapper">
         <h2 class="info__title">Печатные платы</h2>
         <p class="info__description">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-        <a class="info__link" href="#form">
+        <a class="info__link link-js" href="#form">
           <span class="info__text">Получить бесплатную консультацию</span>
           <span class="info__text-mob">Бесплатная консультация</span>
         </a>
@@ -173,30 +173,30 @@
           </picture>
         </div>
         <div class="form__order">
-          <h3 class="form__title">Остались вопросы? Задайте их нам!</h3>
+          <h3>Остались вопросы? Задайте их нам!</h3>
           <p class="form__description">Мы проконсультируем Вас бесплатно</p>
           <form class="form__container" action="#" method="get">
-            <p class="form__input-wrapper">
+            <div class="form__input-wrapper">
               <label class="visually-hidden" for="name">Заполните имя</label>
-              <input class="form__input" type="text" name="name" placeholder="Имя" id="name" required>
-            </p>
-            <p class="form__input-wrapper">
+              <input  type="text" name="name" placeholder="Имя" id="name" required>
+            </div>
+            <div class="form__input-wrapper">
               <label class="visually-hidden" for="tel">Заполните номер телефона</label>
-              <input class="form__input" type="tel" name="tel" placeholder="Телефон" id="tel" required
+              <input  type="tel" name="tel" placeholder="Телефон" id="tel" required
               data-mask="phone">
-            </p>
-            <p class="form__text-area">
+            </div>
+            <div class="form__text-area">
               <label class="visually-hidden" for="question">Задайте вопрос</label>
-              <textarea class="form__input" placeholder="Ваш вопрос" id="question"></textarea>
-            </p>
-            <button class="form__button" type="submit">Задать вопрос</button>
-            <p class="form__checkbox checkbox">
-              <label class="checkbox__label">
-                <input class="visually-hidden checkbox__input" type="checkbox" required>
-                <span class="checkbox__button"></span>
-                <span class="checkbox__text">Я согласен на обработку персональных данных</span>
+              <textarea placeholder="Ваш вопрос" id="question"></textarea>
+            </div>
+            <button  type="submit">Задать вопрос</button>
+            <div class="form__checkbox checkbox">
+              <label>
+                <input class="visually-hidden" type="checkbox" required>
+                <span class="form__befor"></span>
+                <p>Я согласен на обработку персональных данных</p>
               </label>
-            </p>
+            </div>
           </form>
         </div>
       </div>
@@ -321,26 +321,26 @@
         <h2 class="modal__title">Закажите звонок</h2>
         <p class="modal__description">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
         <form class="modal__container form form--modal" action="#" method="get">
-          <p class="form__input-wrapper">
+          <div class="form__input-wrapper">
             <label class="visually-hidden" for="name-modal">Заполните имя</label>
-            <input class="form__input" type="text" name="name" placeholder="Имя" id="input-modal-name" id="name-modal" required>
-          </p>
-          <p class="form__input-wrapper">
+            <input type="text" name="name" placeholder="Имя" id="input-modal-name" id="name-modal" required>
+          </div>
+          <div class="form__input-wrapper">
             <label class="visually-hidden" for="tel-modal">Заполните номер телефона</label>
-            <input class="form__input" type="tel" name="tel" placeholder="Телефон" data-mask="phone" id="tel-modal"  required>
-          </p>
-          <p class="form__text-area">
+            <input type="tel" name="tel" placeholder="Телефон" data-mask="phone" id="tel-modal"  required>
+          </div>
+          <div class="form__text-area">
             <label class="visually-hidden" for="question-modal">Задайте вопрос</label>
-            <textarea class="form__input" placeholder="Ваш вопрос" id="question-modal"></textarea>
-          </p>
-          <button class="form__button" type="submit">Отправить</button>
-          <p class="form__checkbox checkbox">
-            <label class="checkbox__label">
-              <input class="visually-hidden checkbox__input" type="checkbox" required>
-              <span class="checkbox__button"></span>
-              <span class="checkbox__text">Я согласен на обработку персональных данных</span>
+            <textarea placeholder="Ваш вопрос" id="question-modal"></textarea>
+          </div>
+          <button type="submit">Отправить</button>
+          <div class="form__checkbox checkbox">
+            <label>
+              <input class="visually-hidden" type="checkbox" required>
+              <span class="form__befor"></span>
+              <p>Я согласен на обработку персональных данных</p>
             </label>
-          </p>
+          </div>
         </form>
 
         <button class="modal__close btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>

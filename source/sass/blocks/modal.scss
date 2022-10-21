@@ -14,8 +14,6 @@
   background-color: rgba($color-default-black, 0.8);
   visibility: hidden;
   opacity: 0;
-  transition: opacity $trans-modal, transform $trans-modal,
-    visibility $trans-modal;
   pointer-events: none;
   -ms-overflow-style: none;
   scrollbar-width: none;

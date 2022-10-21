@@ -139,3 +139,13 @@
 .about__description--opened {
   display: block;
 }
+
+.about__button:hover {
+  background-color: #00b2ff;
+  color: $color-default-white;
+}
+
+.about__button:active {
+  background-color: #026593;
+  color: $color-default-white;
+}

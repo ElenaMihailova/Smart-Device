@@ -5,15 +5,15 @@
 
   @include vp-1024 {
     margin-left: 0;
-    margin-top: 18px;
+    margin-top: 4px;
   }
 
   margin: 0;
-  margin-top: 30px;
+  margin-top: 14px;
   margin-left: 10px;
 }
 
-.checkbox__label {
+.checkbox label {
   @include vp-767 {
     align-items: flex-start;
   }
@@ -22,7 +22,10 @@
   align-items: center;
 }
 
-.checkbox__text {
+.checkbox p {
+  @include vp-767 {
+    margin: 0;
+  }
   font-family: "PT Mono", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -33,7 +36,7 @@
   text-align: left;
 }
 
-.checkbox__button {
+.checkbox span {
   @include vp-767 {
     margin-top: 5px;
     margin-right: 12px;
@@ -49,9 +52,13 @@
   cursor: pointer;
 }
 
-.checkbox__button::before {
-  position: absolute;
+.form__befor {
+  position: relative;
+}
+
+.form__befor::before {
   content: "";
+  position: absolute;
   width: 14px;
   height: 14px;
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='9' height='6' viewBox='0 0 9 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0.988525 2.33382L3.7778 5.00049L7.96171 1.00049' stroke='white'/%3e%3c/svg%3e");
@@ -60,6 +67,10 @@
   display: none;
 }
 
-.checkbox__input:checked + .checkbox__button::before {
+.checkbox input {
+  display: none;
+}
+
+.checkbox input:checked + .form__befor::before {
   display: block;
 }

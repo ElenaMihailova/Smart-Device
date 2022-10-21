@@ -10,20 +10,6 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-/* Источник - https://proweb63.ru/help/js/smooth-scroll-by-js */
-const smoothLinks = document.querySelectorAll('a[href="#"]');
-for (let smoothLink of smoothLinks) {
-  smoothLink.addEventListener("click", function (e) {
-    e.preventDefault();
-    const id = smoothLink.getAttribute("href");
-
-    document.querySelector(id).scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  });
-}
-
 /* Источник - https://frontips.ru/variant-modalnyh-okon-na-javascript */
 const openModal = (triggerSelector, modalDataSelector, onModalOpened) => {
   const trigger = document.querySelector(triggerSelector);
@@ -85,11 +71,11 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!elements) {
     return;
   }
-  const phoneOptions = {
+  const PHONE_OPTIONS = {
     mask: "+{7}(000)000-00-00",
   };
   elements.forEach((el) => {
-    IMask(el, phoneOptions);
+    IMask(el, PHONE_OPTIONS);
   });
 });
 
@@ -105,3 +91,17 @@ addAccordionListener(document.querySelector(".footer__nav.accordion__item"));
 addAccordionListener(
   document.querySelector(".footer__address.accordion__item")
 );
+
+/* Источник - https://proweb63.ru/help/js/smooth-scroll-by-js */
+const smoothLinks = document.querySelectorAll(".link-js");
+for (let smoothLink of smoothLinks) {
+  smoothLink.addEventListener("click", function (e) {
+    e.preventDefault();
+    const link = smoothLink.getAttribute("href");
+
+    document.querySelector(link).scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  });
+}

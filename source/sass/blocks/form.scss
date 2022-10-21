@@ -3,6 +3,7 @@
     background-image: none;
     background-color: #00b3ff;
   }
+
   background-color: #507b92;
   background-image: url("/img/form.png");
   background-repeat: no-repeat;
@@ -13,6 +14,7 @@
     flex-direction: column;
     gap: 17px;
     background-image: none;
+    background-color: #00b3ff;
   }
 }
 
@@ -20,18 +22,18 @@
   @include vp-767 {
     padding-left: 25px;
     padding-right: 25px;
-    padding-bottom: 87px;
+    padding-bottom: 88px;
   }
 
   @include vp-1024 {
     padding-top: 46px;
-    padding-bottom: 125px;
+    padding-bottom: 116px;
     gap: 0;
     justify-content: flex-start;
   }
 
   padding-top: 166px;
-  padding-bottom: 247px;
+  padding-bottom: 233px;
   padding-left: 50px;
   padding-right: 50px;
   display: flex;
@@ -48,7 +50,7 @@
   width: 585px;
 }
 
-.form__title {
+.form h3 {
   @include vp-767 {
     font-size: 30px;
     line-height: 42px;
@@ -92,10 +94,6 @@
   margin-left: 5px;
 }
 
-.form__input-wrapper {
-  margin: 0;
-}
-
 .form__container {
   @include vp-767 {
     display: flex;
@@ -121,7 +119,7 @@
   grid-column: 1/-1;
 }
 
-.form__text-area .form__input {
+.form__text-area textarea {
   @include vp-767 {
     min-height: 180px;
     padding-top: 24px;
@@ -139,15 +137,17 @@
   cursor: text;
 }
 
-.form__button {
+.form__container button,
+.form--modal button {
   @include vp-767 {
     margin-top: 5px;
     margin-right: 0;
   }
 
   @include vp-1024 {
-    margin-top: 9px;
     margin-right: 55px;
+    margin-top: 10px;
+    margin-bottom: 0;
   }
 
   font-family: "Roboto Condensed", "Arail", sans-serif;
@@ -169,13 +169,14 @@
   margin-right: 10px;
   padding-bottom: 12px;
   cursor: pointer;
+  max-height: 45px;
 }
 
-.form__button:hover {
+.form button:hover {
   background-color: #3abcf3;
 }
 
-.form__button:active {
+.form button:active {
   background-color: #3abcf3;
   outline: 2px solid #ffffff;
 }
@@ -184,7 +185,7 @@
   margin: 0;
 }
 
-.form__input-wrapper .form__input {
+.form__input-wrapper .form input {
   width: 100%;
 }
 
@@ -192,7 +193,8 @@
   grid-column: 2/3;
 }
 
-.form__input {
+.form input,
+.form textarea {
   @include vp-767 {
     padding-top: 13px;
   }
@@ -207,10 +209,11 @@
   border-radius: 3px;
   cursor: pointer;
   outline: none;
-  color: #ffffff;
+  width: 100%;
 }
 
-.form__input::placeholder {
+.form input::placeholder,
+.form textarea::placeholder {
   color: $color-default-white;
 }
 
@@ -222,11 +225,24 @@
   padding-top: 10px;
 }
 
-.form__input:hover {
+.form input:hover,
+.form textarea:hover {
   outline: 2px solid #ffffff;
 }
 
-.form__input:active {
+.form input:active,
+.form textarea:active {
   outline: 2px solid #ffffff;
   color: #ffffff;
+}
+
+.form__input-wrapper {
+  margin: 0;
+}
+
+.form textarea {
+  @include vp-767 {
+    padding-top: 25px;
+  }
+  padding-top: 24px;
 }
