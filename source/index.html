@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preload" href="RobotoCondensed-Regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="RobotoCondensed-Bold.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="PTMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="Roboto-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/RobotoCondensed-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/RobotoCondensed-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/PTMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/Roboto-Medium.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.min.css" />
   <title>Smart Device</title>
 </head>
@@ -67,37 +67,37 @@
       <h2 class="visually-hidden">Преимущества компании Smart Device</h2>
       <div class="advantage__wrapper">
         <ul class="advantage__list">
-          <li class="advantage__item advantage__item--activ advantage__item--long">
-            <svg class="advantage__pic" width="35" height="35" viewBox="0 0 35 35">
+          <li class="advantage__item advantage__item--long">
+            <svg width="35" height="35" viewBox="0 0 35 35">
               <use xlink:href="img/sprite/sprite.svg#watch"></use>
             </svg>
-            <h3 class="advantage__title">Оперативные сроки</h3>
-            <p class="advantage__description">Усовершенствованная логистическая система позволяет нам просчитывать
+            <h3>Оперативные сроки</h3>
+            <p>Усовершенствованная логистическая система позволяет нам просчитывать
               стоимость, производить и&nbsp;доставлять заказы плат и&nbsp;комплектующих в&nbsp;самые короткие сроки</p>
           </li>
           <li class="advantage__item advantage__item--long">
-            <svg class="advantage__pic" width="35" height="35" viewBox="0 0 35 35">
+            <svg width="35" height="35" viewBox="0 0 35 35">
               <use xlink:href="img/sprite/sprite.svg#suppliers"></use>
             </svg>
-            <h3 class="advantage__title">Крупные поставщики</h3>
-            <p class="advantage__description">Нашими поставщиками являются такие крупные мировые компании как: OSRAM,
+            <h3>Крупные поставщики</h3>
+            <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM,
               CREE, HOLGLITRONIC, REFOND. Сотрудничество с&nbsp;такими компаниями обеспечивает хорошее качество нашей
               продукции.</p>
           </li>
           <li class="advantage__item">
-            <svg class="advantage__pic" width="35" height="35" viewBox="0 0 35 35">
+            <svg  width="35" height="35" viewBox="0 0 35 35">
               <use xlink:href="img/sprite/sprite.svg#detective"></use>
             </svg>
-            <h3 class="advantage__title">Полная конфиденциальность</h3>
-            <p class="advantage__description">По&nbsp;желанию клиента мы обеспечиваем полную конфиденциальность.
+            <h3>Полная конфиденциальность</h3>
+            <p>По&nbsp;желанию клиента мы обеспечиваем полную конфиденциальность.
             </p>
           </li>
           <li class="advantage__item">
-            <svg class="advantage__pic" width="35" height="35" viewBox="0 0 35 35">
+            <svg width="35" height="35" viewBox="0 0 35 35">
               <use xlink:href="img/sprite/sprite.svg#tag"></use>
             </svg>
-            <h3 class="advantage__title">Персонализация стоимости</h3>
-            <p class="advantage__description">Мы&nbsp;подбираем определенную фабрику, поставщиков, вид доставки, чтобы
+            <h3>Персонализация стоимости</h3>
+            <p>Мы&nbsp;подбираем определенную фабрику, поставщиков, вид доставки, чтобы
               установить ту&nbsp;цену, которая Вас устраивает.</p>
           </li>
         </ul>
@@ -177,17 +177,17 @@
           <p class="form__description">Мы проконсультируем Вас бесплатно</p>
           <form class="form__container" action="#" method="get">
             <p class="form__input-wrapper">
-              <label class="visually-hidden">Заполните имя</label>
-              <input class="form__input" type="text" name="name" placeholder="Имя" required>
+              <label class="visually-hidden" for="name">Заполните имя</label>
+              <input class="form__input" type="text" name="name" placeholder="Имя" id="name" required>
             </p>
             <p class="form__input-wrapper">
-              <label class="visually-hidden">Заполните номер телефона</label>
-              <input class="form__input" type="tel" name="tel" placeholder="Телефон" required
+              <label class="visually-hidden" for="tel">Заполните номер телефона</label>
+              <input class="form__input" type="tel" name="tel" placeholder="Телефон" id="tel" required
               data-mask="phone">
             </p>
             <p class="form__text-area">
-              <label class="visually-hidden">Задайте вопрос</label>
-              <textarea class="form__input" placeholder="Ваш вопрос"></textarea>
+              <label class="visually-hidden" for="question">Задайте вопрос</label>
+              <textarea class="form__input" placeholder="Ваш вопрос" id="question"></textarea>
             </p>
             <button class="form__button" type="submit">Задать вопрос</button>
             <p class="form__checkbox checkbox">
@@ -322,16 +322,16 @@
         <p class="modal__description">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
         <form class="modal__container form form--modal" action="#" method="get">
           <p class="form__input-wrapper">
-            <label class="visually-hidden">Заполните имя</label>
-            <input class="form__input" type="text" name="name" placeholder="Имя" id="input-modal-name" required>
+            <label class="visually-hidden" for="name-modal">Заполните имя</label>
+            <input class="form__input" type="text" name="name" placeholder="Имя" id="input-modal-name" id="name-modal" required>
           </p>
           <p class="form__input-wrapper">
-            <label class="visually-hidden">Заполните номер телефона</label>
-            <input class="form__input" type="tel" name="tel" placeholder="Телефон" data-mask="phone" required>
+            <label class="visually-hidden" for="tel-modal">Заполните номер телефона</label>
+            <input class="form__input" type="tel" name="tel" placeholder="Телефон" data-mask="phone" id="tel-modal"  required>
           </p>
           <p class="form__text-area">
-            <label class="visually-hidden">Задайте вопрос</label>
-            <textarea class="form__input" placeholder="Ваш вопрос"></textarea>
+            <label class="visually-hidden" for="question-modal">Задайте вопрос</label>
+            <textarea class="form__input" placeholder="Ваш вопрос" id="question-modal"></textarea>
           </p>
           <button class="form__button" type="submit">Отправить</button>
           <p class="form__checkbox checkbox">

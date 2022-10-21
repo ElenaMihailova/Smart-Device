@@ -3,7 +3,6 @@
     width: 100%;
     padding-right: 25px;
     padding-left: 25px;
-    padding-top: 20px;
     padding-bottom: 20px;
     position: relative;
     padding-top: 23px;
@@ -12,7 +11,7 @@
 
 .address::after {
   @include vp-767 {
-    content: '';
+    content: "";
     width: 100%;
     height: 1px;
     position: absolute;
@@ -41,7 +40,7 @@
     max-width: 320px;
   }
 
-  font-family: 'PT Mono', sans-serif;
+  font-family: "PT Mono", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -61,7 +60,7 @@
     margin: 0;
   }
 
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", "Arail", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;

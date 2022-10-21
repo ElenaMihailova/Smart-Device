@@ -53,7 +53,7 @@
   row-gap: 29px;
 }
 
-.advantage__title {
+.advantage__item h3 {
   @include vp-767 {
     font-size: 20px;
     line-height: 140%;
@@ -64,7 +64,7 @@
     margin-bottom: 8px;
   }
 
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", "Arail", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -75,7 +75,7 @@
   text-align: left;
 }
 
-.advantage__description {
+.advantage__item p {
   @include vp-767 {
     font-size: 14px;
     line-height: 135%;
@@ -84,7 +84,7 @@
 
   margin: 0;
   text-align: left;
-  font-family: 'PT Mono', sans-serif;
+  font-family: "PT Mono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 135%;
@@ -127,9 +127,10 @@
   justify-content: flex-start;
 }
 
-.advantage__pic {
+.advantage__item svg {
   @include vp-767 {
     flex: 0 0 30px;
+    fill: #00b2ff;
   }
 
   @include vp-1024 {
@@ -141,39 +142,23 @@
   margin-bottom: 23px;
 }
 
-// .advantage__item--active .advantage__pic {
-//   fill: #f2f5f6;
-// }
-
-// .advantage__item--active {
-//   background-color: #00b2ff;
-// }
-
-// .advantage__item--active .advantage__description {
-//   color: #f2f5f7;
-// }
-
-// .advantage__item--active .advantage__title {
-//   color: #f2f5f7;
-// }
-
 .advantage__item:hover {
   background-color: #00b2ff;
 }
 
-.advantage__item:hover .advantage__title {
+.advantage__item:hover h3 {
   color: #f2f5f7;
 }
 
-.advantage__item:hover .advantage__pic {
+.advantage__item:hover svg {
   fill: #f2f5f6;
 }
 
-.advantage__item:hover .advantage__description {
+.advantage__item:hover p {
   color: #f2f5f7;
 }
 
-.advantage__item--long .advantage__title {
+.advantage__item--long h3 {
   @include vp-767 {
     margin-bottom: 8px;
   }

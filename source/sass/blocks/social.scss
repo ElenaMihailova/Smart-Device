@@ -5,6 +5,7 @@
     padding-top: 10px;
     justify-content: flex-end;
   }
+
   @include vp-1024 {
     margin: 0;
     align-self: center;

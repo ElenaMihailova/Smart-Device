@@ -4,7 +4,8 @@
     background-color: #00b3ff;
   }
   background-color: #507b92;
-  background: url(/img/form.png) no-repeat;
+  background-image: url("/img/form.png");
+  background-repeat: no-repeat;
   background-size: cover;
 
   &--modal {
@@ -58,7 +59,7 @@
     margin-bottom: 6px;
   }
 
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", "Arail", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
@@ -149,7 +150,7 @@
     margin-right: 55px;
   }
 
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", "Arail", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -196,7 +197,7 @@
     padding-top: 13px;
   }
 
-  font-family: 'PT Mono', sans-serif;
+  font-family: "PT Mono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;

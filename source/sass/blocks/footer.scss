@@ -75,7 +75,7 @@
 
 .footer__container::after {
   @include vp-767 {
-    content: '';
+    content: "";
     width: 100%;
     height: 1px;
     position: absolute;

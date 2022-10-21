@@ -1,11 +1,11 @@
-import { iosVhFix } from './utils/ios-vh-fix';
-import { initModals } from './modules/modals/init-modals';
+import { iosVhFix } from "./utils/ios-vh-fix";
+import { initModals } from "./modules/modals/init-modals";
 
-document.querySelector('.nojs').classList.remove('nojs');
+document.querySelector(".nojs").classList.remove("nojs");
 
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener("DOMContentLoaded", () => {
   iosVhFix();
-  window.addEventListener('load', () => {
+  window.addEventListener("load", () => {
     initModals();
   });
 });
@@ -13,13 +13,13 @@ window.addEventListener('DOMContentLoaded', () => {
 /* Источник - https://proweb63.ru/help/js/smooth-scroll-by-js */
 const smoothLinks = document.querySelectorAll('a[href="#"]');
 for (let smoothLink of smoothLinks) {
-  smoothLink.addEventListener('click', function (e) {
+  smoothLink.addEventListener("click", function (e) {
     e.preventDefault();
-    const id = smoothLink.getAttribute('href');
+    const id = smoothLink.getAttribute("href");
 
     document.querySelector(id).scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
+      behavior: "smooth",
+      block: "start",
     });
   });
 }
@@ -31,31 +31,31 @@ const openModal = (triggerSelector, modalDataSelector, onModalOpened) => {
   if (!trigger || !modal) {
     return;
   }
-  trigger.addEventListener('click', (elem) => {
+  trigger.addEventListener("click", (elem) => {
     elem.preventDefault();
-    modal.classList.add('modal--active');
+    modal.classList.add("modal--active");
     if (onModalOpened) {
       onModalOpened();
     }
   });
 };
 
-openModal('.header__button', '.modal', () => {
-  setTimeout(() => document.getElementById('input-modal-name').focus(), 100);
+openModal(".header__button", ".modal", () => {
+  setTimeout(() => document.getElementById("input-modal-name").focus(), 100);
 });
 
 const closeModal = () => {
-  const modals = document.querySelectorAll('.modal');
+  const modals = document.querySelectorAll(".modal");
   if (!modals) {
     return;
   }
   modals.forEach((elem) => {
-    elem.addEventListener('click', (el) => {
-      if (el.target.closest('.modal__close')) {
-        elem.classList.remove('modal--active');
+    elem.addEventListener("click", (el) => {
+      if (el.target.closest(".modal__close")) {
+        elem.classList.remove("modal--active");
       }
-      if (el.target.closest('.modal__overlay')) {
-        elem.classList.remove('modal--active');
+      if (el.target.closest(".modal__overlay")) {
+        elem.classList.remove("modal--active");
       }
     });
   });
@@ -64,29 +64,29 @@ const closeModal = () => {
 closeModal();
 
 function showMoreText() {
-  const btn = document.querySelector('.about__button');
-  const moreText = document.querySelector('.about__description-more');
+  const btn = document.querySelector(".about__button");
+  const moreText = document.querySelector(".about__description-more");
 
-  if (!moreText.classList.contains('about__description--opened')) {
-    btn.textContent = 'Свернуть';
-    moreText.classList.add('about__description--opened');
+  if (!moreText.classList.contains("about__description--opened")) {
+    btn.textContent = "Свернуть";
+    moreText.classList.add("about__description--opened");
   } else {
-    btn.textContent = 'Подробнее';
-    moreText.classList.remove('about__description--opened');
+    btn.textContent = "Подробнее";
+    moreText.classList.remove("about__description--opened");
   }
 }
 
 document
-  .querySelector('.about__button')
-  .addEventListener('click', showMoreText);
+  .querySelector(".about__button")
+  .addEventListener("click", showMoreText);
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   const elements = document.querySelectorAll('[data-mask="phone"]');
   if (!elements) {
     return;
   }
   const phoneOptions = {
-    mask: '+{7}(000)000-00-00',
+    mask: "+{7}(000)000-00-00",
   };
   elements.forEach((el) => {
     IMask(el, phoneOptions);
@@ -95,13 +95,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function addAccordionListener(accordionItemElement) {
   const buttonElement =
-    accordionItemElement.querySelector('.accordion__button');
-  buttonElement.addEventListener('click', () => {
-    accordionItemElement.classList.add('accordion__item--opened');
+    accordionItemElement.querySelector(".accordion__button");
+  buttonElement.addEventListener("click", () => {
+    accordionItemElement.classList.add("accordion__item--opened");
   });
 }
 
-addAccordionListener(document.querySelector('.footer__nav.accordion__item'));
+addAccordionListener(document.querySelector(".footer__nav.accordion__item"));
 addAccordionListener(
-  document.querySelector('.footer__address.accordion__item')
+  document.querySelector(".footer__address.accordion__item")
 );
