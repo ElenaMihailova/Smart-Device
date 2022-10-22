@@ -236,8 +236,26 @@
   color: #ffffff;
 }
 
+.form input:focus,
+.form textarea:focus {
+  outline: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+.form input[type="text"]:focus,
+.form input[type="text"]:active,
+.form textarea:focus {
+  outline: 2px solid #ffffff;
+  color: #ffffff;
+}
+
 .form__input-wrapper {
   margin: 0;
+}
+
+.form input[type="text"],
+.form input[type="tel"] {
+  color: #ffffff;
 }
 
 .form textarea {
@@ -245,4 +263,5 @@
     padding-top: 25px;
   }
   padding-top: 24px;
+  color: #ffffff;
 }
