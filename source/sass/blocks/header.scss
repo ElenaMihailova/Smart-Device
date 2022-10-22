@@ -87,3 +87,7 @@
     align-self: flex-start;
   }
 }
+
+.header__button[disabled] {
+  opacity: 0, 3;
+}

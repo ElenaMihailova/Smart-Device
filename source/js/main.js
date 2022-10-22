@@ -18,11 +18,14 @@ const openModal = (triggerSelector, modalDataSelector, onModalOpened) => {
     return;
   }
   trigger.addEventListener("click", (elem) => {
-    elem.preventDefault();
-    modal.classList.add("modal--active");
-    if (onModalOpened) {
-      onModalOpened();
+    if (document.querySelector(".modal")) {
+      elem.preventDefault();
+      modal.classList.add("modal--active");
+      if (onModalOpened) {
+        onModalOpened();
+      }
     }
+    return;
   });
 };
 

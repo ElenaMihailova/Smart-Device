@@ -889,6 +889,10 @@ body {
   background-color: #f2f5f7;
 }
 
+.header__button[disabled] {
+  opacity: 0, 3;
+}
+
 .logo__link {
   display: -webkit-box;
   display: -ms-flexbox;
