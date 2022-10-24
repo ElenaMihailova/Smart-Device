@@ -6,38 +6,38 @@
 
 .service:nth-child(1) {
   @include vp-767 {
-    background-image: url("/img/card-mobile-1.webp");
+    background-image: url("../img/card-mobile-1.webp");
   }
 
   @include vp-1024 {
-    background-image: url("/img/card-tablet-1.webp");
+    background-image: url("../img/card-tablet-1.webp");
   }
 
-  background-image: url("/img/card-1.webp");
+  background-image: url("../img/card-1.webp");
 }
 
 .service:nth-child(2) {
   @include vp-767 {
-    background-image: url("/img/card-mobile-2.webp");
+    background-image: url("../img/card-mobile-2.webp");
   }
 
   @include vp-1024 {
-    background-image: url("/img/card-tablet-2.webp");
+    background-image: url("../img/card-tablet-2.webp");
   }
 
-  background-image: url("/img/card-2.webp");
+  background-image: url("../img/card-2.webp");
 }
 
 .service:nth-child(3) {
   @include vp-767 {
-    background-image: url("/img/card-mobile-3.webp");
+    background-image: url("../img/card-mobile-3.webp");
   }
 
   @include vp-1024 {
-    background-image: url("/img/card-tablet-3.webp");
+    background-image: url("../img/card-tablet-3.webp");
   }
 
-  background-image: url("/img/card-3.webp");
+  background-image: url("../img/card-3.webp");
 }
 
 .service__link {
@@ -100,7 +100,7 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  background-image: url("/img/svg/arrow.svg");
+  background-image: url("../img/svg/arrow.svg");
   background-repeat: no-repeat;
   background-position: center;
 }

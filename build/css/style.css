@@ -1293,7 +1293,7 @@ body {
 
 .info {
   background-color: #041827;
-  background-image: url("/img/back-desktop.webp");
+  background-image: url("../img/back-desktop.webp");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -1525,15 +1525,15 @@ body {
 }
 
 .service:nth-child(1) {
-  background-image: url("/img/card-1.webp");
+  background-image: url("../img/card-1.webp");
 }
 
 .service:nth-child(2) {
-  background-image: url("/img/card-2.webp");
+  background-image: url("../img/card-2.webp");
 }
 
 .service:nth-child(3) {
-  background-image: url("/img/card-3.webp");
+  background-image: url("../img/card-3.webp");
 }
 
 .service__link {
@@ -1575,7 +1575,7 @@ body {
   position: absolute;
   bottom: 0;
   right: 0;
-  background-image: url("/img/svg/arrow.svg");
+  background-image: url("../img/svg/arrow.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -1590,7 +1590,7 @@ body {
 
 .form {
   background-color: #507b92;
-  background-image: url("/img/form.png");
+  background-image: url("../img/form.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -2147,15 +2147,15 @@ body {
   }
 
   .service:nth-child(1) {
-    background-image: url("/img/card-tablet-1.webp");
+    background-image: url("../img/card-tablet-1.webp");
   }
 
   .service:nth-child(2) {
-    background-image: url("/img/card-tablet-2.webp");
+    background-image: url("../img/card-tablet-2.webp");
   }
 
   .service:nth-child(3) {
-    background-image: url("/img/card-tablet-3.webp");
+    background-image: url("../img/card-tablet-3.webp");
   }
 
   .service__link {
@@ -2614,15 +2614,15 @@ body {
   }
 
   .service:nth-child(1) {
-    background-image: url("/img/card-mobile-1.webp");
+    background-image: url("../img/card-mobile-1.webp");
   }
 
   .service:nth-child(2) {
-    background-image: url("/img/card-mobile-2.webp");
+    background-image: url("../img/card-mobile-2.webp");
   }
 
   .service:nth-child(3) {
-    background-image: url("/img/card-mobile-3.webp");
+    background-image: url("../img/card-mobile-3.webp");
   }
 
   .service__link {
