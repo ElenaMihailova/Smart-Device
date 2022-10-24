@@ -140,9 +140,11 @@
   display: block;
 }
 
-.about__button:hover {
+.about__button:hover,
+.about__button:focus {
   background-color: #00b2ff;
   color: $color-default-white;
+  outline: none;
 }
 
 .about__button:active {

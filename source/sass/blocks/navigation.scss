@@ -55,6 +55,12 @@
   color: #00b2ff;
 }
 
+.navigation__link:focus {
+  color: #00b2ff;
+  outline: none;
+  border: none;
+}
+
 .navigation__link:active {
   color: #00b2ff;
 }

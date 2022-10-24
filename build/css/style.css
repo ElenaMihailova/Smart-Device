@@ -665,6 +665,14 @@ body {
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .btn {
@@ -838,6 +846,7 @@ body {
   z-index: 2;
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
 }
 
@@ -1083,6 +1092,8 @@ body {
 
 .footer {
   background-color: #041827;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
 .footer__wrapper {
@@ -1143,6 +1154,15 @@ body {
   fill: #00b2ff;
 }
 
+.social__link:focus .social__link-img {
+  fill: #00b2ff;
+}
+
+.social__link:focus {
+  outline: none;
+  border: none;
+}
+
 .navigation__title {
   font-family: "Roboto Condensed", "Arail", sans-serif;
   font-style: normal;
@@ -1170,6 +1190,12 @@ body {
 
 .navigation__link:hover {
   color: #00b2ff;
+}
+
+.navigation__link:focus {
+  color: #00b2ff;
+  outline: none;
+  border: none;
 }
 
 .navigation__link:active {
@@ -1269,7 +1295,6 @@ body {
   background-color: #041827;
   background-image: url("/img/back-desktop.webp");
   background-size: cover;
-  margin-top: -120px;
   background-repeat: no-repeat;
 }
 
@@ -1435,9 +1460,11 @@ body {
   display: block;
 }
 
-.about__button:hover {
+.about__button:hover,
+.about__button:focus {
   background-color: #00b2ff;
   color: #ffffff;
+  outline: none;
 }
 
 .about__button:active {
@@ -1678,7 +1705,8 @@ body {
   max-height: 45px;
 }
 
-.form button:hover {
+.form button:hover,
+.form button:focus {
   background-color: #3abcf3;
 }
 
@@ -1796,9 +1824,6 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-}
-
-.checkbox p {
   font-family: "PT Mono", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1846,6 +1871,12 @@ body {
 
 .nojs .accordion__content {
   display: block;
+}
+
+.main__container {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
 }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
@@ -2041,6 +2072,10 @@ body {
 
   .address__item {
     max-width: 320px;
+  }
+
+  .info {
+    margin-top: -120px;
   }
 
   .info__title {
@@ -2662,9 +2697,6 @@ body {
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
-  }
-
-  .checkbox p {
     margin: 0;
   }
 

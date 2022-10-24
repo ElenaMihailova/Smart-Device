@@ -50,7 +50,7 @@
       <a class="header__button" href="#">Заказать звонок</a>
     </div>
   </header>
-  <main>
+  <main class="main__container">
     <h1 class="visually-hidden">Smart Device-электронные комплектующие</h1>
     <section class="info">
       <div class="info__wrapper">
@@ -85,7 +85,7 @@
               продукции.</p>
           </li>
           <li class="advantage__item">
-            <svg  width="35" height="35" viewBox="0 0 35 35">
+            <svg width="35" height="35" viewBox="0 0 35 35">
               <use xlink:href="img/sprite/sprite.svg#detective"></use>
             </svg>
             <h3>Полная конфиденциальность</h3>
@@ -169,32 +169,32 @@
         <div class="form__img-wrap">
           <picture>
             <source type="image/webp" srcset="/img/paper-airplane.webp, /img/paper-airplane@2.webp 2x">
-            <img class="form__img" src="/img/paper-airplane.png" srcset="/img/paper-airplane@2.png"  alt="Бумажный самолетик." width="510" height="285">
+            <img class="form__img" src="/img/paper-airplane.png" srcset="/img/paper-airplane@2.png"
+              alt="Бумажный самолетик." width="510" height="285">
           </picture>
         </div>
         <div class="form__order">
           <h3>Остались вопросы? Задайте их нам!</h3>
           <p class="form__description">Мы проконсультируем Вас бесплатно</p>
-          <form class="form__container" action="#" method="get">
+          <form class="form__container" action="https://echo.htmlacademy.ru/" method="get">
             <div class="form__input-wrapper">
               <label class="visually-hidden" for="name">Заполните имя</label>
-              <input  type="text" name="name" placeholder="Имя" id="name" required>
+              <input type="text" name="name" placeholder="Имя" id="name" required>
             </div>
             <div class="form__input-wrapper">
               <label class="visually-hidden" for="tel">Заполните номер телефона</label>
-              <input  type="tel" name="tel" placeholder="Телефон" id="tel" required
-              data-mask="phone">
+              <input type="tel" name="tel" placeholder="Телефон" id="tel" required data-mask="phone">
             </div>
             <div class="form__text-area">
               <label class="visually-hidden" for="question">Задайте вопрос</label>
-              <textarea placeholder="Ваш вопрос" id="question"></textarea>
+              <textarea placeholder="Ваш вопрос" id="question" name="question"></textarea>
             </div>
-            <button  type="submit">Задать вопрос</button>
+            <button type="submit">Задать вопрос</button>
             <div class="form__checkbox checkbox">
               <label>
                 <input class="visually-hidden" type="checkbox" required>
                 <span class="form__befor"></span>
-                <p>Я согласен на обработку персональных данных</p>
+                Я согласен на обработку персональных данных
               </label>
             </div>
           </form>
@@ -320,25 +320,25 @@
       <div class="modal__content">
         <h2 class="modal__title">Закажите звонок</h2>
         <p class="modal__description">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-        <form class="modal__container form form--modal" action="#" method="get">
+        <form class="modal__container form form--modal" action="https://echo.htmlacademy.ru/" method="get">
           <div class="form__input-wrapper">
             <label class="visually-hidden" for="input-modal-name">Заполните имя</label>
             <input type="text" name="name" placeholder="Имя" id="input-modal-name" required>
           </div>
           <div class="form__input-wrapper">
             <label class="visually-hidden" for="tel-modal">Заполните номер телефона</label>
-            <input type="tel" name="tel" placeholder="Телефон" data-mask="phone" id="tel-modal"  required>
+            <input type="tel" name="tel" placeholder="Телефон" data-mask="phone" id="tel-modal" required>
           </div>
           <div class="form__text-area">
             <label class="visually-hidden" for="question-modal">Задайте вопрос</label>
-            <textarea placeholder="Ваш вопрос" id="question-modal"></textarea>
+            <textarea placeholder="Ваш вопрос" id="question-modal" name="question-modal"></textarea>
           </div>
           <button type="submit">Отправить</button>
           <div class="form__checkbox checkbox">
             <label>
               <input class="visually-hidden" type="checkbox" required>
               <span class="form__befor"></span>
-              <p>Я согласен на обработку персональных данных</p>
+              Я согласен на обработку персональных данных
             </label>
           </div>
         </form>

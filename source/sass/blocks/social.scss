@@ -45,3 +45,12 @@
 .social__link:active .social__link-img {
   fill: #00b2ff;
 }
+
+.social__link:focus .social__link-img {
+  fill: #00b2ff;
+}
+
+.social__link:focus {
+  outline: none;
+  border: none;
+}

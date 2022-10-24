@@ -172,7 +172,8 @@
   max-height: 45px;
 }
 
-.form button:hover {
+.form button:hover,
+.form button:focus {
   background-color: #3abcf3;
 }
 
