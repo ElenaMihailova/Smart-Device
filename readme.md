@@ -1,3 +1,3 @@
 Ссылка на опубликованный проект
-<a href="https://elenamihailova.github.io/Smart-Device/">
+<a href="https://elenamihailova.github.io/Test-Smart-/">
 Click here </a>
