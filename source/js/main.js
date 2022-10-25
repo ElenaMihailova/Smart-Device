@@ -108,3 +108,17 @@ for (let smoothLink of smoothLinks) {
     });
   });
 }
+
+// Валидация формы
+const form = document.querySelector(".js-form");
+const formInputs = document.querySelectorAll(".js-input");
+
+form.onsubmit = function () {
+  formInputs.forEach(function (input) {
+    if (input.value == "") {
+      form.classList.add("error");
+      return false;
+    }
+  });
+  return true;
+};

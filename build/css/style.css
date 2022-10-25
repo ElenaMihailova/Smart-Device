@@ -394,7 +394,7 @@ template {
 
 @font-face {
   font-family: "Roboto Condensed";
-  src: url("/fonts/RobotoCondensed-Bold.woff2") format("woff2"), url("/fonts/RobotoCondensed-Bold.woff") format("woff");
+  src: url("../fonts/RobotoCondensed-Bold.woff2") format("woff2"), url("../fonts/RobotoCondensed-Bold.woff") format("woff");
   font-style: normal;
   font-weight: 700;
   font-display: swap;
@@ -402,7 +402,7 @@ template {
 
 @font-face {
   font-family: "PT Mono";
-  src: url("/fonts/PTMono-Regular.woff2") format("woff2"), url("/fonts/PTMono-Regular.woff") format("woff");
+  src: url("../fonts/ptmono-regular.woff2") format("woff2"), url("../fonts/ptmono-regular.woff") format("woff");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -410,7 +410,7 @@ template {
 
 @font-face {
   font-family: "Roboto";
-  src: url("/fonts/Roboto-Medium.woff2") format("woff2"), url("/fonts/Roboto-Medium.woff") format("woff");
+  src: url("../fonts/Roboto-Medium.woff2") format("woff2"), url("../fonts/Roboto-Medium.woff") format("woff");
   font-style: normal;
   font-weight: 500;
   font-display: swap;
@@ -569,7 +569,6 @@ button,
   -ms-flex-direction: column;
   flex-direction: column;
   min-height: 100vh;
-  /* stylelint-disable-next-line */
   min-height: calc(100 * var(--vh, 1vh));
 }
 
@@ -1809,6 +1808,34 @@ body {
 .form textarea {
   padding-top: 24px;
   color: #ffffff;
+}
+
+.error input {
+  border: 2px solid red;
+}
+
+.error .form__befor {
+  border: 2px solid red;
+}
+
+.error input::-webkit-input-placeholder {
+  color: red;
+}
+
+.error input::-moz-placeholder {
+  color: red;
+}
+
+.error input:-ms-input-placeholder {
+  color: red;
+}
+
+.error input::-ms-input-placeholder {
+  color: red;
+}
+
+.error input::placeholder {
+  color: red;
 }
 
 .checkbox {

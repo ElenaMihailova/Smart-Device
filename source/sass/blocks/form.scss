@@ -263,6 +263,19 @@
   @include vp-767 {
     padding-top: 25px;
   }
+
   padding-top: 24px;
   color: #ffffff;
+}
+
+.error input {
+  border: 2px solid $color-default-white;
+}
+
+.error .form__befor {
+  border: 2px solid $color-default-white;
+}
+
+.error input::placeholder {
+  color: $color-default-white;
 }

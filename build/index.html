@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preload" href="./fonts/RobotoCondensed-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="./fonts/RobotoCondensed-Bold.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="./fonts/PTMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/ptmono-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="./fonts/Roboto-Medium.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/style.min.css" />
+  <link rel="stylesheet" href="./css/style.min.css" />
   <title>Smart Device</title>
 </head>
 <body>
@@ -68,7 +68,7 @@
         <ul class="advantage__list">
           <li class="advantage__item advantage__item--long">
             <svg width="35" height="35" viewBox="0 0 35 35">
-              <use xlink:href="img/sprite/sprite.svg#watch"></use>
+              <use xlink:href="./img/sprite/sprite.svg#watch"></use>
             </svg>
             <h3>Оперативные сроки</h3>
             <p>Усовершенствованная логистическая система позволяет нам просчитывать
@@ -76,7 +76,7 @@
           </li>
           <li class="advantage__item advantage__item--long">
             <svg width="35" height="35" viewBox="0 0 35 35">
-              <use xlink:href="../img/sprite/sprite.svg#suppliers"></use>
+              <use xlink:href="./img/sprite/sprite.svg#suppliers"></use>
             </svg>
             <h3>Крупные поставщики</h3>
             <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM,
@@ -85,7 +85,7 @@
           </li>
           <li class="advantage__item">
             <svg width="35" height="35" viewBox="0 0 35 35">
-              <use xlink:href="../img/sprite/sprite.svg#detective"></use>
+              <use xlink:href="./img/sprite/sprite.svg#detective"></use>
             </svg>
             <h3>Полная конфиденциальность</h3>
             <p>По&nbsp;желанию клиента мы обеспечиваем полную конфиденциальность.
@@ -93,7 +93,7 @@
           </li>
           <li class="advantage__item">
             <svg width="35" height="35" viewBox="0 0 35 35">
-              <use xlink:href="../img/sprite/sprite.svg#tag"></use>
+              <use xlink:href="./img/sprite/sprite.svg#tag"></use>
             </svg>
             <h3>Персонализация стоимости</h3>
             <p>Мы&nbsp;подбираем определенную фабрику, поставщиков, вид доставки, чтобы
@@ -167,22 +167,22 @@
         <h2 class="visually-hidden">Форма обратной связи</h2>
         <div class="form__img-wrap">
           <picture>
-            <source type="image/webp" srcset="../img/paper-airplane.webp, ../img/paper-airplane@2.webp 2x">
-            <img class="form__img" src="./img/paper-airplane.png" srcset="../img/paper-airplane@2.png"
+            <source type="image/webp" srcset="./img/paper-airplane.webp, ./img/paper-airplane@2.webp 2x">
+            <img class="form__img" src="./img/paper-airplane.png" srcset="./img/paper-airplane@2.png"
               alt="Бумажный самолетик." width="510" height="285">
           </picture>
         </div>
         <div class="form__order">
           <h3>Остались вопросы? Задайте их нам!</h3>
           <p class="form__description">Мы проконсультируем Вас бесплатно</p>
-          <form class="form__container" action="https://echo.htmlacademy.ru/" method="get">
+          <form class="form__container js-form" action="https://echo.htmlacademy.ru/" method="get">
             <div class="form__input-wrapper">
               <label class="visually-hidden" for="name">Заполните имя</label>
-              <input type="text" name="name" placeholder="Имя" id="name" required>
+              <input class="js-input" type="text" name="name" placeholder="Имя" id="name" required>
             </div>
             <div class="form__input-wrapper">
               <label class="visually-hidden" for="tel">Заполните номер телефона</label>
-              <input type="tel" name="tel" placeholder="Телефон" id="tel" required data-mask="phone">
+              <input class="js-input" type="tel" name="tel" placeholder="Телефон" id="tel"  data-mask="phone" required>
             </div>
             <div class="form__text-area">
               <label class="visually-hidden" for="question">Задайте вопрос</label>
@@ -191,7 +191,7 @@
             <button type="submit">Задать вопрос</button>
             <div class="form__checkbox checkbox">
               <label>
-                <input class="visually-hidden" type="checkbox" required>
+                <input class="js-input" type="checkbox" name="checkbox" required>
                 <span class="form__befor"></span>
                 Я согласен на обработку персональных данных
               </label>
@@ -319,7 +319,7 @@
       <div class="modal__content">
         <h2 class="modal__title">Закажите звонок</h2>
         <p class="modal__description">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-        <form class="modal__container form form--modal" action="https://echo.htmlacademy.ru/" method="get">
+        <form class="modal__container form form--modal js-form" action="https://echo.htmlacademy.ru/" method="get">
           <div class="form__input-wrapper">
             <label class="visually-hidden" for="input-modal-name">Заполните имя</label>
             <input type="text" name="name" placeholder="Имя" id="input-modal-name" required>
@@ -335,7 +335,7 @@
           <button type="submit">Отправить</button>
           <div class="form__checkbox checkbox">
             <label>
-              <input class="visually-hidden" type="checkbox" required>
+              <input type="checkbox" required name="username">
               <span class="form__befor"></span>
               Я согласен на обработку персональных данных
             </label>
@@ -344,7 +344,7 @@
 
         <button class="modal__close btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
           <svg class="modal__close-img" width="15" height="15">
-            <use xlink:href="../img/sprite_auto.svg#icon-close"></use>
+            <use xlink:href="./img/sprite/icon-close.svg#icon-close"></use>
           </svg>
         </button>
       </div>
