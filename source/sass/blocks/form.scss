@@ -22,18 +22,18 @@
   @include vp-767 {
     padding-left: 25px;
     padding-right: 25px;
-    padding-bottom: 88px;
+    padding-bottom: 87px;
   }
 
   @include vp-1024 {
     padding-top: 46px;
-    padding-bottom: 116px;
+    padding-bottom: 125px;
     gap: 0;
     justify-content: flex-start;
   }
 
   padding-top: 166px;
-  padding-bottom: 233px;
+  padding-bottom: 247px;
   padding-left: 50px;
   padding-right: 50px;
   display: flex;
@@ -45,6 +45,7 @@
 .form__order {
   @include vp-1024 {
     width: auto;
+    margin: 0 auto;
   }
 
   width: 585px;
@@ -68,7 +69,7 @@
   line-height: 51px;
   color: #ffffff;
   margin: 0;
-  margin-bottom: 13px;
+  margin-bottom: 11px;
   text-align: left;
 }
 
@@ -110,7 +111,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 30px;
-  row-gap: 15px;
+  row-gap: 16px;
   padding-left: 5px;
 }
 
@@ -140,13 +141,13 @@
 .form__container button,
 .form--modal button {
   @include vp-767 {
-    margin-top: 5px;
+    margin-top: 6px;
     margin-right: 0;
   }
 
   @include vp-1024 {
     margin-right: 55px;
-    margin-top: 10px;
+    margin-top: 9px;
     margin-bottom: 0;
   }
 
@@ -167,7 +168,7 @@
   border: none;
   margin-top: 14px;
   margin-right: 10px;
-  padding-bottom: 12px;
+  padding-bottom: 11px;
   cursor: pointer;
 }
 
@@ -293,4 +294,15 @@
   background-size: contain;
   background-repeat: no-repeat;
   display: none;
+}
+
+.form--modal button {
+  margin-top: 25px;
+  margin-right: 0;
+}
+
+.form--modal .checkbox {
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 100%;
 }

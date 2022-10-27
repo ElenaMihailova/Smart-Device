@@ -35,7 +35,7 @@
   text-transform: uppercase;
   color: #f2f5f7;
   margin: 0;
-  margin-bottom: 34px;
+  margin-bottom: 32px;
   display: block;
   text-align: left;
 }
@@ -91,7 +91,7 @@
   margin: 0;
   max-width: 685px;
   text-align: left;
-  margin-bottom: 48px;
+  margin-bottom: 47px;
 }
 
 .info__link {
@@ -101,6 +101,7 @@
     padding-top: 12px;
     padding-bottom: 12px;
     padding-left: 24px;
+    max-width: 270px;
   }
 
   @include vp-1024 {

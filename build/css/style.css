@@ -835,6 +835,11 @@ body {
   height: 20px;
 }
 
+.modal__container button {
+  margin-top: 25px;
+  margin-right: 0;
+}
+
 .header {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
   background: -o-linear-gradient(top, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
@@ -1110,7 +1115,7 @@ body {
   padding-top: 50px;
   padding-bottom: 55px;
   padding-left: 50px;
-  padding-right: 50px;
+  padding-right: 55px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -1179,7 +1184,7 @@ body {
   color: #ffffff;
   margin: 0;
   text-align: left;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
 }
 
 .navigation__link {
@@ -1195,6 +1200,10 @@ body {
   display: block;
   text-align: left;
   cursor: pointer;
+}
+
+.navigation__link--long {
+  width: 92%;
 }
 
 .navigation__link:hover {
@@ -1257,7 +1266,7 @@ body {
 
 .address__item {
   max-width: 340px;
-  margin-bottom: 6px;
+  margin-bottom: 9px;
   text-align: left;
 }
 
@@ -1330,7 +1339,7 @@ body {
   text-transform: uppercase;
   color: #f2f5f7;
   margin: 0;
-  margin-bottom: 34px;
+  margin-bottom: 32px;
   display: block;
   text-align: left;
 }
@@ -1365,7 +1374,7 @@ body {
   margin: 0;
   max-width: 685px;
   text-align: left;
-  margin-bottom: 48px;
+  margin-bottom: 47px;
 }
 
 .info__link {
@@ -1583,7 +1592,7 @@ body {
 }
 
 .service__name--level {
-  width: 90%;
+  width: 75%;
 }
 
 .service__link::after {
@@ -1630,7 +1639,7 @@ body {
 
 .form__background {
   padding-top: 166px;
-  padding-bottom: 233px;
+  padding-bottom: 247px;
   padding-left: 50px;
   padding-right: 50px;
   display: -webkit-box;
@@ -1657,7 +1666,7 @@ body {
   line-height: 51px;
   color: #ffffff;
   margin: 0;
-  margin-bottom: 13px;
+  margin-bottom: 11px;
   text-align: left;
 }
 
@@ -1680,7 +1689,7 @@ body {
   -webkit-column-gap: 30px;
   -moz-column-gap: 30px;
   column-gap: 30px;
-  row-gap: 15px;
+  row-gap: 16px;
   padding-left: 5px;
 }
 
@@ -1720,7 +1729,7 @@ body {
   border: none;
   margin-top: 14px;
   margin-right: 10px;
-  padding-bottom: 12px;
+  padding-bottom: 11px;
   cursor: pointer;
 }
 
@@ -1873,10 +1882,22 @@ body {
   display: none;
 }
 
+.form--modal button {
+  margin-top: 25px;
+  margin-right: 0;
+}
+
+.form--modal .checkbox {
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 100%;
+}
+
 .checkbox {
   margin: 0;
-  margin-top: 14px;
+  margin-top: 29px;
   margin-left: 10px;
+  position: relative;
 }
 
 .checkbox label {
@@ -2084,7 +2105,7 @@ body {
   }
 
   .advantage__item h3 {
-    margin-bottom: 6px;
+    margin-bottom: 4px;
   }
 
   .advantage__item p {
@@ -2094,12 +2115,12 @@ body {
   .advantage__item {
     width: 320px;
     padding-right: 42px;
-    padding-bottom: 70px;
+    padding-bottom: 72px;
     padding-left: 40px;
   }
 
   .advantage__item--long {
-    padding-bottom: 35px;
+    padding-bottom: 33px;
   }
 
   .advantage__item svg {
@@ -2135,7 +2156,7 @@ body {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    margin-bottom: 37px;
+    margin-bottom: 38px;
   }
 
   .footer__order {
@@ -2156,6 +2177,10 @@ body {
     gap: 26px;
   }
 
+  .navigation__title {
+    margin-bottom: 22px;
+  }
+
   .navigation__item {
     margin-bottom: 8px;
   }
@@ -2167,6 +2192,14 @@ body {
   .address__item {
     max-width: 320px;
     margin-bottom: 8px;
+  }
+
+  .address__item:first-of-type {
+    margin-bottom: 10px;
+  }
+
+  .address__item:last-of-type {
+    margin-bottom: 0;
   }
 
   .info {
@@ -2275,7 +2308,7 @@ body {
 
   .form__background {
     padding-top: 46px;
-    padding-bottom: 116px;
+    padding-bottom: 125px;
     gap: 0;
     -webkit-box-pack: start;
     -ms-flex-pack: start;
@@ -2284,6 +2317,7 @@ body {
 
   .form__order {
     width: auto;
+    margin: 0 auto;
   }
 
   .form h3 {
@@ -2309,7 +2343,7 @@ body {
   .form__container button,
   .form--modal button {
     margin-right: 55px;
-    margin-top: 10px;
+    margin-top: 9px;
     margin-bottom: 0;
   }
 
@@ -2319,7 +2353,7 @@ body {
 
   .checkbox {
     margin-left: 0;
-    margin-top: 4px;
+    margin-top: 18px;
   }
 }
 
@@ -2422,6 +2456,10 @@ body {
     padding-bottom: 35px;
   }
 
+  .advantage__item--long {
+    padding-right: 24px;
+  }
+
   .advantage__item svg {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 30px;
@@ -2488,10 +2526,6 @@ body {
   }
 
   .social {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-    -ms-flex-direction: row-reverse;
-    flex-direction: row-reverse;
     padding-top: 10px;
     -webkit-box-pack: end;
     -ms-flex-pack: end;
@@ -2534,6 +2568,10 @@ body {
     margin: 0;
   }
 
+  .navigation__link {
+    font-size: 14px;
+  }
+
   .navigation__order {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2544,7 +2582,7 @@ body {
   }
 
   .navigation__list {
-    margin-top: 15px;
+    padding-top: 15px;
   }
 
   .address {
@@ -2568,7 +2606,11 @@ body {
   }
 
   .address__list {
-    padding-top: 20px;
+    padding-top: 14px;
+  }
+
+  .address__item:first-of-type {
+    margin-bottom: 14px;
   }
 
   .address__title {
@@ -2583,6 +2625,10 @@ body {
     -ms-flex-pack: justify;
     justify-content: space-between;
     width: 100%;
+  }
+
+  .address__link {
+    font-size: 14px;
   }
 
   .accordion__button {
@@ -2607,6 +2653,7 @@ body {
     height: 1px;
     background-color: #f8fdff;
     position: absolute;
+    top: 4px;
   }
 
   .accordion__button::after {
@@ -2651,6 +2698,7 @@ body {
     padding-top: 12px;
     padding-bottom: 12px;
     padding-left: 24px;
+    max-width: 270px;
   }
 
   .info__text-mob {
@@ -2769,7 +2817,7 @@ body {
   .form__background {
     padding-left: 25px;
     padding-right: 25px;
-    padding-bottom: 88px;
+    padding-bottom: 87px;
   }
 
   .form h3 {
@@ -2802,7 +2850,7 @@ body {
 
   .form__container button,
   .form--modal button {
-    margin-top: 5px;
+    margin-top: 6px;
     margin-right: 0;
   }
 

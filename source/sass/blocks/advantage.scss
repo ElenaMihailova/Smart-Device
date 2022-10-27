@@ -62,7 +62,7 @@
   }
 
   @include vp-1024 {
-    margin-bottom: 6px;
+    margin-bottom: 4px;
   }
 
   font-family: "Roboto Condensed", "Arail", sans-serif;
@@ -102,16 +102,20 @@
     padding-left: 24px;
     padding-top: 32px;
     padding-bottom: 35px;
+
+    &--long {
+      padding-right: 24px;
+    }
   }
 
   @include vp-1024 {
     width: 320px;
     padding-right: 42px;
-    padding-bottom: 70px;
+    padding-bottom: 72px;
     padding-left: 40px;
 
     &--long {
-      padding-bottom: 35px;
+      padding-bottom: 33px;
     }
   }
 

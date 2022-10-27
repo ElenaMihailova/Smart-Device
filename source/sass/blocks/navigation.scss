@@ -27,6 +27,10 @@
     margin: 0;
   }
 
+  @include vp-1024 {
+    margin-bottom: 22px;
+  }
+
   font-family: "Roboto Condensed", "Arail", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -37,10 +41,14 @@
   color: $color-default-white;
   margin: 0;
   text-align: left;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
 }
 
 .navigation__link {
+  @include vp-767 {
+    font-size: 14px;
+  }
+
   width: max-content;
   font-family: "PT Mono", "Arial", sans-serif;
   font-style: normal;
@@ -51,6 +59,10 @@
   display: block;
   text-align: left;
   cursor: pointer;
+
+  &--long {
+    width: 92%;
+  }
 }
 
 .navigation__link:hover {
@@ -102,7 +114,7 @@
 
 .navigation__list {
   @include vp-767 {
-    margin-top: 15px;
+    padding-top: 15px;
   }
 
   display: block;
