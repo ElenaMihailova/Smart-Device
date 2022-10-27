@@ -169,7 +169,6 @@
   margin-right: 10px;
   padding-bottom: 12px;
   cursor: pointer;
-  max-height: 45px;
 }
 
 .form button:hover,
@@ -268,6 +267,7 @@
   color: #ffffff;
 }
 
+//todo отдельный блок
 .error input {
   border: 2px solid $color-default-white;
 }
@@ -278,4 +278,19 @@
 
 .error input::placeholder {
   color: $color-default-white;
+}
+
+.form__befor {
+  position: relative;
+}
+
+.form__befor::before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='9' height='6' viewBox='0 0 9 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0.988525 2.33382L3.7778 5.00049L7.96171 1.00049' stroke='white'/%3e%3c/svg%3e");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: none;
 }

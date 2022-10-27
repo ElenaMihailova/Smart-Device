@@ -109,16 +109,22 @@ for (let smoothLink of smoothLinks) {
   });
 }
 
-// Валидация формы
 const form = document.querySelector(".js-form");
-const formInputs = document.querySelectorAll(".js-input");
 
-form.onsubmit = function () {
-  formInputs.forEach(function (input) {
-    if (input.value == "") {
-      form.classList.add("error");
-      return false;
-    }
-  });
-  return true;
-};
+const pristine = new Pristine(
+  form,
+  {
+    classTo: "form__input-wrapper",
+    errorClass: "form__item--invalid",
+    successClass: "form__item--valid",
+    errorTextParent: "form__input-wrapper",
+    // errorTextTag: "span",
+    errorTextClass: "form__error",
+  },
+  false
+);
+
+form.addEventListener("submit", (evt) => {
+  evt.preventDefault();
+  pristine.validate();
+});

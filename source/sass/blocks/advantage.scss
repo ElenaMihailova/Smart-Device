@@ -36,12 +36,13 @@
   @include vp-767 {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 31px;
+    align-items: center;
   }
 
   @include vp-1024 {
     column-gap: 29px;
-    row-gap: 30px;
+    row-gap: 29px;
   }
 
   list-style: none;
@@ -49,7 +50,7 @@
   padding: 0;
   display: grid;
   grid-template-columns: repeat(2, auto);
-  column-gap: 31px;
+  column-gap: 32px;
   row-gap: 29px;
 }
 
@@ -57,11 +58,11 @@
   @include vp-767 {
     font-size: 20px;
     line-height: 140%;
-    margin-bottom: 15px;
+    margin-bottom: 14px;
   }
 
   @include vp-1024 {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
 
   font-family: "Roboto Condensed", "Arail", sans-serif;
@@ -71,7 +72,7 @@
   line-height: 140%;
   color: #00b2ff;
   margin: 0;
-  margin-bottom: 13px;
+  margin-bottom: 12px;
   text-align: left;
 }
 
@@ -82,49 +83,53 @@
     min-height: 140px;
   }
 
+  @include vp-1024 {
+    min-height: 120px;
+  }
+
   margin: 0;
   text-align: left;
   font-family: "PT Mono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 135%;
-  overflow: hidden;
 }
 
 .advantage__item {
   @include vp-767 {
     width: 100%;
     height: auto;
-    padding: 30px;
-    padding-left: 25px;
+    padding-left: 24px;
     padding-top: 32px;
     padding-bottom: 35px;
-    min-height: 325px;
+  }
+
+  @include vp-1024 {
+    width: 320px;
+    padding-right: 42px;
+    padding-bottom: 70px;
+    padding-left: 40px;
 
     &--long {
-      min-height: 340px;
-      padding-top: 30px;
+      padding-bottom: 35px;
     }
   }
 
-  @include vp-1600 {
-    width: 320px;
-    min-height: 360px;
-    padding-right: 42px;
-  }
-
-  width: 595px;
-  height: 300px;
+  max-width: 595px;
   border: 1px solid #ebebeb;
   border-left: 5px solid #00b2ff;
   padding-left: 41px;
   padding-right: 45px;
   padding-top: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 90px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+
+  &--long {
+    padding-bottom: 35px;
+  }
 }
 
 .advantage__item svg {
@@ -160,6 +165,27 @@
 
 .advantage__item--long h3 {
   @include vp-767 {
+    margin-bottom: 7px;
+  }
+
+  @include vp-1024 {
     margin-bottom: 8px;
+  }
+}
+
+.advantage__item--long p {
+  @include vp-767 {
+    min-height: 190px;
+  }
+  min-height: 120px;
+}
+
+.advantage__item--img svg {
+  @include vp-767 {
+    margin-bottom: 16px;
+  }
+
+  @include vp-1024 {
+    margin-bottom: 10px;
   }
 }

@@ -1,4 +1,8 @@
 .contact__list {
+  @include vp-767 {
+    justify-content: center;
+  }
+
   @include vp-1024 {
     gap: 20px;
   }
@@ -11,6 +15,7 @@
   flex-wrap: wrap;
   gap: 30px;
   padding-left: 27px;
+  max-width: 480px;
 }
 
 .contact__link {
@@ -20,6 +25,7 @@
 
   display: flex;
   align-items: center;
+  width: max-content;
 }
 
 .contact__link:hover .contact__text {
@@ -54,5 +60,5 @@
     min-width: auto;
   }
 
-  min-width: 225px;
+  // min-width: 225px;
 }

@@ -7,11 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preload" href="./fonts/RobotoCondensed-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="./fonts/RobotoCondensed-Bold.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="./fonts/ptmono-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/PTMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="./fonts/Roboto-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" href="./img/favicon/32x32.png" />
+  <link rel="icon" href="./img/favicon/32x32.ico" type="image/x-icon">
   <link rel="stylesheet" href="./css/style.min.css" />
   <title>Smart Device</title>
 </head>
+
 <body>
   <header class="header">
     <div class="header__wrapper">
@@ -72,7 +75,7 @@
             </svg>
             <h3>Оперативные сроки</h3>
             <p>Усовершенствованная логистическая система позволяет нам просчитывать
-              стоимость, производить и&nbsp;доставлять заказы плат и&nbsp;комплектующих в&nbsp;самые короткие сроки</p>
+              стоимость, производить и&nbsp;доставлять заказы плат и комплектующих в&nbsp;самые короткие сроки.</p>
           </li>
           <li class="advantage__item advantage__item--long">
             <svg width="35" height="35" viewBox="0 0 35 35">
@@ -91,7 +94,7 @@
             <p>По&nbsp;желанию клиента мы обеспечиваем полную конфиденциальность.
             </p>
           </li>
-          <li class="advantage__item">
+          <li class="advantage__item advantage__item--img">
             <svg width="35" height="35" viewBox="0 0 35 35">
               <use xlink:href="./img/sprite/sprite.svg#tag"></use>
             </svg>
@@ -144,18 +147,18 @@
             и&nbsp;услуги</span> <span class="catalog__text catalog__text--mob">Товары и услуги Smart Device</span></h2>
         <ul class="catalog__list">
           <li class="catalog__item service">
-            <a class="service__link" href="catalog-list-1.html">
-              <p class="service__name">Производство <span>печатных плат</span></p>
+            <a class="service__link" href="#">
+              <p class="service__name">Производство печатных плат</p>
             </a>
           </li>
           <li class="catalog__item service">
-            <a class="service__link" href="catalog-list-2.html">
-              <p class="service__name">Монтаж <span>печатных плат</span></p>
+            <a class="service__link" href="#">
+              <p class="service__name">Монтаж печатных плат</p>
             </a>
           </li>
           <li class="catalog__item service">
-            <a class="service__link" href="catalog-list-3.html">
-              <p class="service__name">Комплектующие <span>для светотехники</span></p>
+            <a class="service__link" href="#">
+              <p class="service__name service__name--level">Комплектующие для светотехники</p>
             </a>
           </li>
         </ul>
@@ -175,23 +178,26 @@
         <div class="form__order">
           <h3>Остались вопросы? Задайте их нам!</h3>
           <p class="form__description">Мы проконсультируем Вас бесплатно</p>
-          <form class="form__container js-form" action="https://echo.htmlacademy.ru/" method="get">
+          <form class="form__container js-form" action="https://echo.htmlacademy.ru/" method="get" autocomplete='off'>
             <div class="form__input-wrapper">
               <label class="visually-hidden" for="name">Заполните имя</label>
-              <input class="js-input" type="text" name="name" placeholder="Имя" id="name" required>
+              <input class="js-input" type="text" name="name" placeholder="Имя" id="name" required
+                data-pristine-required-message="Обязательное поле">
             </div>
             <div class="form__input-wrapper">
               <label class="visually-hidden" for="tel">Заполните номер телефона</label>
-              <input class="js-input" type="tel" name="tel" placeholder="Телефон" id="tel"  data-mask="phone" required>
+              <input class="js-input" type="tel" name="tel" placeholder="Телефон" id="tel" data-mask="phone" required
+                maxlength='16' data-pristine-required-message="Обязательное поле">
             </div>
             <div class="form__text-area">
               <label class="visually-hidden" for="question">Задайте вопрос</label>
               <textarea placeholder="Ваш вопрос" id="question" name="question"></textarea>
             </div>
             <button type="submit">Задать вопрос</button>
-            <div class="form__checkbox checkbox">
+            <div class="form__checkbox checkbox form__input-wrapper">
               <label>
-                <input class="js-input" type="checkbox" name="checkbox" required>
+                <input class="js-input" type="checkbox" name="checkbox" required
+                  data-pristine-required-message="Обязательное поле">
                 <span class="form__befor"></span>
                 Я согласен на обработку персональных данных
               </label>
@@ -290,16 +296,24 @@
           </div>
           <ul class="address__list  accordion__content">
             <li class="address__item">
-              г. Мытищи, Олимпийский проспект, д.10
+              <a class="address__link" href="https://goo.gl/maps/RjX4CVqVZ4rkK18E7">
+                г. Мытищи, Олимпийский проспект, д.10
+              </a>
             </li>
-            <li class="address__item address__item--tel">
-              +7 (495) 589-40-50
+            <li class="address__item">
+              <a class="address__link" href="tel:+74955894050">
+                +7 (495) 589-40-50
+              </a>
             </li>
-            <li class="address__item address__item--tel">
-              +7 (925) 389-58-29
+            <li class="address__item">
+              <a class="address__link" href="tel:+79253895829">
+                +7 (925) 389-58-29
+              </a>
             </li>
-            <li class="address__item address__item--tel">
-              +7 (925) 364-78-13
+            <li class="address__item">
+              <a class="address__link" href="tel:+79253647813">
+                +7 (925) 364-78-13
+              </a>
             </li>
           </ul>
         </div>
@@ -319,14 +333,15 @@
       <div class="modal__content">
         <h2 class="modal__title">Закажите звонок</h2>
         <p class="modal__description">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-        <form class="modal__container form form--modal js-form" action="https://echo.htmlacademy.ru/" method="get">
+        <form class="modal__container form form--modal js-form" action="https://echo.htmlacademy.ru/" method="get"
+          autocomplete='off'>
           <div class="form__input-wrapper">
             <label class="visually-hidden" for="input-modal-name">Заполните имя</label>
-            <input type="text" name="name" placeholder="Имя" id="input-modal-name" required>
+            <input type="text" name="name" placeholder="Имя" id="input-modal-name" required autofocus>
           </div>
           <div class="form__input-wrapper">
             <label class="visually-hidden" for="tel-modal">Заполните номер телефона</label>
-            <input type="tel" name="tel" placeholder="Телефон" data-mask="phone" id="tel-modal" required>
+            <input type="tel" name="tel" placeholder="Телефон" data-mask="phone" id="tel-modal" maxlength='16' required>
           </div>
           <div class="form__text-area">
             <label class="visually-hidden" for="question-modal">Задайте вопрос</label>
@@ -343,13 +358,14 @@
         </form>
 
         <button class="modal__close btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-          <svg class="modal__close-img" width="15" height="15">
-            <use xlink:href="./img/sprite/icon-close.svg#icon-close"></use>
+          <svg class="modal__close-img" width="20" height="20" viewBox="0 0 20 20">
+            <use xlink:href="./img/sprite/sprite.svg#close"></use>
           </svg>
         </button>
       </div>
     </div>
   </div>
+  <script src="./pristine/dist/pristine.min.js"></script>
   <script src="https://unpkg.com/imask"></script>
   <script src="js/main.min.js"></script>
 </body>

@@ -75,3 +75,9 @@
 
   display: block;
 }
+
+.catalog__wrapper {
+  @include vp-767 {
+    width: 100%;
+  }
+}

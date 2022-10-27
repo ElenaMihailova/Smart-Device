@@ -38,21 +38,11 @@
 .address__item {
   @include vp-1024 {
     max-width: 320px;
+    margin-bottom: 8px;
   }
-
-  font-family: "PT Mono", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 135%;
-  color: rgba(255, 255, 255, 0.7);
   max-width: 340px;
   margin-bottom: 6px;
   text-align: left;
-
-  &--tel {
-    line-height: 156%;
-  }
 }
 
 .address__title {
@@ -79,4 +69,28 @@
     justify-content: space-between;
     width: 100%;
   }
+}
+
+.address__link {
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 135%;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+}
+
+.address__link:hover {
+  color: #00b2ff;
+}
+
+.address__link:focus {
+  color: #00b2ff;
+  outline: none;
+  border: none;
+}
+
+.address__link:active {
+  color: #00b2ff;
 }

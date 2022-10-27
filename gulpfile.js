@@ -1,7 +1,6 @@
 const gulp = require("gulp");
 const plumber = require("gulp-plumber");
 const sourcemap = require("gulp-sourcemaps");
-// const sass = require("gulp-sass");
 const sass = require("gulp-sass")(require("sass"));
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
@@ -89,7 +88,10 @@ const copy = () => {
         "source/**.html",
         "source/fonts/**",
         "source/img/**",
-        "source/favicon/**",
+        // "source/favicon/**",
+        "source/manifest.webmanifest",
+        "source/*.ico",
+        "source/pristine/**",
       ],
       {
         base: "source",
