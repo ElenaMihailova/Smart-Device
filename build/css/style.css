@@ -835,11 +835,6 @@ body {
   height: 20px;
 }
 
-.modal__container button {
-  margin-top: 25px;
-  margin-right: 0;
-}
-
 .header {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
   background: -o-linear-gradient(top, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
@@ -1953,7 +1948,7 @@ body {
   display: block;
 }
 
-.main__container {
+.main-container {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
@@ -2545,11 +2540,11 @@ body {
   }
 
   .navigation {
-    padding-top: 23px;
-    padding-bottom: 21px;
+    padding-top: 13px;
+    padding-bottom: 11px;
     width: 100%;
-    padding-right: 25px;
-    padding-left: 25px;
+    padding-right: 15px;
+    padding-left: 15px;
     position: relative;
   }
 
@@ -2572,6 +2567,10 @@ body {
     font-size: 14px;
   }
 
+  .navigation__wrapper {
+    padding-left: 10px;
+  }
+
   .navigation__order {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2579,6 +2578,7 @@ body {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    padding: 10px;
   }
 
   .navigation__list {
@@ -2587,11 +2587,11 @@ body {
 
   .address {
     width: 100%;
-    padding-right: 25px;
-    padding-left: 25px;
-    padding-bottom: 20px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 10px;
     position: relative;
-    padding-top: 23px;
+    padding-top: 13px;
   }
 
   .address::after {
@@ -2606,7 +2606,9 @@ body {
   }
 
   .address__list {
-    padding-top: 14px;
+    padding-top: 4px;
+    padding-left: 10px;
+    padding-bottom: 10px;
   }
 
   .address__item:first-of-type {
@@ -2625,6 +2627,10 @@ body {
     -ms-flex-pack: justify;
     justify-content: space-between;
     width: 100%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 10px;
   }
 
   .address__link {

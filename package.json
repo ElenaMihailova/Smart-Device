@@ -57,7 +57,6 @@
     "node": ">=16.15.1"
   },
   "dependencies": {
-    "gulp-sourcemaps": "^3.0.0",
-    "pristinejs": "^0.1.9"
+    "gulp-sourcemaps": "^3.0.0"
   }
 }

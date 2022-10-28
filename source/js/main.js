@@ -82,18 +82,24 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-function addAccordionListener(accordionItemElement) {
-  const buttonElement =
-    accordionItemElement.querySelector(".accordion__button");
-  buttonElement.addEventListener("click", () => {
-    accordionItemElement.classList.add("accordion__item--opened");
+/* Аккордион. Источник - https://www.cyberforum.ru/javascript/thread2770907.html */
+document.addEventListener("DOMContentLoaded", getReady);
+function getReady() {
+  document.querySelectorAll(".accordion__order").forEach((elem) => {
+    elem.addEventListener("click", click__title);
   });
 }
 
-addAccordionListener(document.querySelector(".footer__nav.accordion__item"));
-addAccordionListener(
-  document.querySelector(".footer__address.accordion__item")
-);
+function click__title() {
+  if (this.nextElementSibling.style.display == "block") {
+    this.nextElementSibling.style.display = "none";
+    return;
+  }
+  document.querySelectorAll(".accordion__content").forEach((elem) => {
+    elem.style.display = "none";
+  });
+  this.nextElementSibling.style.display = "block";
+}
 
 /* Источник - https://proweb63.ru/help/js/smooth-scroll-by-js */
 const smoothLinks = document.querySelectorAll(".link-js");
@@ -109,22 +115,21 @@ for (let smoothLink of smoothLinks) {
   });
 }
 
+// const pristine = new Pristine(form);
+
 const form = document.querySelector(".js-form");
 
-const pristine = new Pristine(
-  form,
-  {
-    classTo: "form__input-wrapper",
-    errorClass: "form__item--invalid",
-    successClass: "form__item--valid",
-    errorTextParent: "form__input-wrapper",
-    // errorTextTag: "span",
-    errorTextClass: "form__error",
-  },
-  false
-);
+const pristine = new Pristine(form, {
+  classTo: "form__input-wrapper",
+  errorClass: "form__item--invalid",
+  successClass: "form__item--valid",
+  errorTextParent: "form__input-wrapper",
+  errorTextTag: "span",
+  errorTextClass: "form__error",
+});
 
 form.addEventListener("submit", (evt) => {
   evt.preventDefault();
-  pristine.validate();
+  const valid = pristine.validate();
+  console.log(valid);
 });
