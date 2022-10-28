@@ -1,5 +1,6 @@
 import { iosVhFix } from "./utils/ios-vh-fix";
 import { initModals } from "./modules/modals/init-modals";
+import { createFocusTrap } from "focus-trap";
 
 document.querySelector(".nojs").classList.remove("nojs");
 
@@ -29,8 +30,14 @@ const openModal = (triggerSelector, modalDataSelector, onModalOpened) => {
   });
 };
 
+let focusTrap;
+
 openModal(".header__button", ".modal", () => {
-  setTimeout(() => document.getElementById("input-modal-name").focus(), 100);
+  setTimeout(() => {
+    focusTrap = createFocusTrap(".modal");
+    focusTrap.activate();
+    document.getElementById("input-modal-name").focus();
+  }, 100);
 });
 
 const closeModal = () => {
@@ -40,11 +47,12 @@ const closeModal = () => {
   }
   modals.forEach((elem) => {
     elem.addEventListener("click", (el) => {
-      if (el.target.closest(".modal__close")) {
+      if (
+        el.target.closest(".modal__close") ||
+        el.target.closest(".modal__overlay")
+      ) {
         elem.classList.remove("modal--active");
-      }
-      if (el.target.closest(".modal__overlay")) {
-        elem.classList.remove("modal--active");
+        if (focusTrap) focusTrap.deactivate();
       }
     });
   });
@@ -70,16 +78,25 @@ document
   .addEventListener("click", showMoreText);
 
 document.addEventListener("DOMContentLoaded", () => {
-  const elements = document.querySelectorAll('[data-mask="phone"]');
-  if (!elements) {
+  const element = document.getElementById("tel");
+  if (!element) {
     return;
   }
-  const PHONE_OPTIONS = {
+  const maskOptions = {
     mask: "+{7}(000)000-00-00",
   };
-  elements.forEach((el) => {
-    IMask(el, PHONE_OPTIONS);
-  });
+  IMask(element, maskOptions);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const element = document.getElementById("tel-modal");
+  if (!element) {
+    return;
+  }
+  const maskOptions = {
+    mask: "+{7}(000)000-00-00",
+  };
+  IMask(element, maskOptions);
 });
 
 /* Аккордион. Источник - https://www.cyberforum.ru/javascript/thread2770907.html */
@@ -115,21 +132,33 @@ for (let smoothLink of smoothLinks) {
   });
 }
 
-// const pristine = new Pristine(form);
+const forms = document.querySelectorAll(".js-form");
 
-const form = document.querySelector(".js-form");
+forms.forEach((formElem) => {
+  const pristine = new Pristine(formElem, {
+    classTo: "form__input-wrapper",
+    errorClass: "form__item--invalid",
+    successClass: "form__item--valid",
+    errorTextParent: "form__input-wrapper",
+    errorTextTag: "span",
+    errorTextClass: "form__error",
+  });
 
-const pristine = new Pristine(form, {
-  classTo: "form__input-wrapper",
-  errorClass: "form__item--invalid",
-  successClass: "form__item--valid",
-  errorTextParent: "form__input-wrapper",
-  errorTextTag: "span",
-  errorTextClass: "form__error",
-});
+  function validatePhone(value) {
+    return value.length === 16;
+  }
 
-form.addEventListener("submit", (evt) => {
-  evt.preventDefault();
-  const valid = pristine.validate();
-  console.log(valid);
+  pristine.addValidator(
+    formElem.querySelector(".js-input--tel"),
+    validatePhone,
+    "Телефонный номер в формате +7(495)000-00-00"
+  );
+
+  formElem.addEventListener("submit", (evt) => {
+    evt.preventDefault();
+    const valid = pristine.validate();
+    if (valid) {
+      formElem.submit();
+    }
+  });
 });

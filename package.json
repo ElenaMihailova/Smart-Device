@@ -57,6 +57,8 @@
     "node": ">=16.15.1"
   },
   "dependencies": {
-    "gulp-sourcemaps": "^3.0.0"
+    "focus-trap": "^7.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "imask": "^6.4.3"
   }
 }

@@ -178,17 +178,20 @@
         <div class="form__order">
           <h3>Остались вопросы? Задайте их нам!</h3>
           <p class="form__description">Мы проконсультируем Вас бесплатно</p>
-          <form class="form__container js-form" action="https://echo.htmlacademy.ru/" method="get" autocomplete='off' id='form1'>
+          <form class="form__container js-form" action="https://echo.htmlacademy.ru/" method="get" autocomplete='off'
+            id='form1'>
             <div class="form__input-wrapper">
               <label class="visually-hidden" for="name">Заполните имя</label>
               <input class="js-input" type="text" name="name" placeholder="Имя" id="name" required
                 data-pristine-required-message="Обязательное поле">
             </div>
+
             <div class="form__input-wrapper">
               <label class="visually-hidden" for="tel">Заполните номер телефона</label>
-              <input class="js-input" type="tel" name="tel" placeholder="Телефон" id="tel" data-mask="phone" required
-                maxlength='16' data-pristine-required-message="Обязательное поле">
+              <input class="js-input js-input--tel" type="tel" name="tel" placeholder="Телефон" id="tel"
+                data-mask="phone" required maxlength='16' data-pristine-required-message="Обязательное поле">
             </div>
+
             <div class="form__text-area">
               <label class="visually-hidden" for="question">Задайте вопрос</label>
               <textarea placeholder="Ваш вопрос" id="question" name="question"></textarea>
@@ -323,25 +326,22 @@
   </footer>
 
   <!-- Модальное окно -->
-  <!-- основно блок -->
   <div class="modal modal--preload" data-modal="feedback">
-    <!-- для центрирования окна -->
     <div class="modal__wrapper">
-      <!-- для прокрутки -->
       <div class="modal__overlay" data-close-modal></div>
-      <!-- контент -->
       <div class="modal__content">
         <h2 class="modal__title">Закажите звонок</h2>
         <p class="modal__description">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
         <form class="modal__container form form--modal js-form" action="https://echo.htmlacademy.ru/" method="get"
-          autocomplete='off'>
+          autocomplete='off' id='default'>
           <div class="form__input-wrapper">
             <label class="visually-hidden" for="input-modal-name">Заполните имя</label>
             <input type="text" name="name" placeholder="Имя" id="input-modal-name" required autofocus>
           </div>
           <div class="form__input-wrapper">
             <label class="visually-hidden" for="tel-modal">Заполните номер телефона</label>
-            <input type="tel" name="tel" placeholder="Телефон" data-mask="phone" id="tel-modal" maxlength='16' required>
+            <input class="js-modal js-input--tel" type="tel" name="tel" placeholder="Телефон" data-mask="phone" id="tel-modal"
+              maxlength='16' data-pristine-maxlength="16" required class="activate-default">
           </div>
           <div class="form__text-area">
             <label class="visually-hidden" for="question-modal">Задайте вопрос</label>
@@ -357,7 +357,7 @@
           </div>
         </form>
 
-        <button class="modal__close btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+        <button class="modal__close btn-reset" type="button" aria-label="Закрыть попап" data-close-modal id="deactivate-default">
           <svg class="modal__close-img" width="20" height="20" viewBox="0 0 20 20">
             <use xlink:href="./img/sprite/sprite.svg#close"></use>
           </svg>
@@ -365,7 +365,7 @@
       </div>
     </div>
   </div>
-  <!-- <script src="pristine/dist/pristine.js"></script> -->
+  <script src="pristine/dist/pristine.js"></script>
   <script src="https://unpkg.com/imask"></script>
   <script src="js/main.min.js"></script>
 </body>
