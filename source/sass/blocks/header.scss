@@ -34,20 +34,21 @@
     padding-top: 20px;
     padding-right: 50px;
     padding-bottom: 25px;
-    justify-content: space-between;
   }
 
   @include vp-1600 {
     max-width: none;
+    justify-content: space-between;
   }
 
   max-width: 1160px;
   color: $color-default-white;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
   padding-top: 27px;
+  width: 100%;
 }
 
 .header__button {
@@ -70,6 +71,7 @@
   border: 1px solid #f2f5f7;
   border-radius: 3px;
   cursor: pointer;
+  margin-left: auto;
 }
 
 .header__button:hover {
@@ -91,4 +93,15 @@
 
 .header__button[disabled] {
   opacity: 0, 3;
+}
+
+.header__logo {
+  @include vp-1024 {
+    margin-right: 0;
+  }
+
+  @include vp-1600 {
+    margin-right: 50px;
+  }
+  margin-right: 14%;
 }
