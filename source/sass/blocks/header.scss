@@ -55,6 +55,9 @@
   @include vp-1024 {
     display: none;
   }
+  @include vp-1600 {
+    margin-left: 0;
+  }
 
   display: block;
   flex: 0 0 160px;

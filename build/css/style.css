@@ -962,9 +962,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   gap: 30px;
@@ -2010,8 +2007,16 @@ body {
     justify-content: space-between;
   }
 
+  .header__button {
+    margin-left: 0;
+  }
+
   .header__logo {
     margin-right: 50px;
+  }
+
+  .contact {
+    min-width: auto;
   }
 
   .advantage__wrapper {
@@ -2087,10 +2092,6 @@ body {
     flex-direction: column;
     margin: 0;
     margin-left: 15px;
-  }
-
-  .contact {
-    min-width: auto;
   }
 
   .contact__list {

@@ -1,8 +1,7 @@
 .contact {
-  @include vp-1024 {
+  @include vp-1600 {
     min-width: auto;
   }
-
   min-width: 480px;
 }
 
