@@ -56,7 +56,9 @@
     padding: 40px;
     background-color: #00b3ff;
     border-radius: 3px;
-    padding-top: 37px;
+    padding-left: 42px;
+    padding-top: 33px;
+    padding-bottom: 45px;
 
     @include vp-767 {
       width: 100%;

@@ -761,7 +761,9 @@ body {
   padding: 40px;
   background-color: #00b3ff;
   border-radius: 3px;
-  padding-top: 37px;
+  padding-left: 42px;
+  padding-top: 33px;
+  padding-bottom: 45px;
 }
 
 .modal__close {
@@ -855,16 +857,16 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   padding-top: 27px;
   width: 100%;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 
 .header__button {
@@ -886,6 +888,7 @@ body {
   border-radius: 3px;
   cursor: pointer;
   margin-left: auto;
+  margin-top: 8px;
 }
 
 .header__button:hover {
@@ -953,6 +956,9 @@ body {
 
 .contact {
   min-width: 480px;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
 }
 
 .contact__list {
@@ -964,13 +970,13 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  gap: 30px;
   max-width: 480px;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   padding-left: 12px;
   padding-right: 8px;
+  gap: 20px;
 }
 
 .contact__link {
@@ -1002,6 +1008,10 @@ body {
 .contact__text {
   display: block;
   color: #ffffff;
+}
+
+.contact__item:nth-child(2) {
+  margin-left: auto;
 }
 
 .advantage {
@@ -1052,7 +1062,7 @@ body {
 }
 
 .advantage__item {
-  max-width: 595px;
+  width: 595px;
   border: 1px solid #ebebeb;
   border-left: 5px solid #00b2ff;
   padding-left: 41px;
@@ -1889,14 +1899,14 @@ body {
 }
 
 .form--modal button {
-  margin-top: 25px;
+  margin-top: 3px;
   margin-right: 0;
 }
 
 .form--modal .checkbox {
-  margin: 0 auto;
-  margin-top: 20px;
+  margin: 0;
   width: 100%;
+  margin-right: auto;
 }
 
 .checkbox {
@@ -1953,6 +1963,13 @@ body {
   border-color: #041827;
   background-color: #3abcf3;
   outline: 5px solid #3abcf3;
+}
+
+.checkbox--modal label {
+  -webkit-box-pack: left;
+  -ms-flex-pack: left;
+  justify-content: left;
+  padding-left: 10px;
 }
 
 .nojs .accordion__content {
@@ -2017,12 +2034,17 @@ body {
 
   .contact {
     min-width: auto;
+    padding-top: 0;
   }
 
   .advantage__wrapper {
     max-width: -webkit-min-content;
     max-width: -moz-min-content;
     max-width: min-content;
+  }
+
+  .advantage__item {
+    width: 400px;
   }
 
   .footer__order {
@@ -2568,11 +2590,7 @@ body {
   }
 
   .navigation {
-    padding-top: 13px;
-    padding-bottom: 11px;
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
     position: relative;
   }
 
@@ -2596,7 +2614,7 @@ body {
   }
 
   .navigation__wrapper {
-    padding-left: 10px;
+    padding-left: 25px;
   }
 
   .navigation__order {
@@ -2606,7 +2624,10 @@ body {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    padding: 10px;
+    padding-top: 23px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 21px;
   }
 
   .navigation__list {
@@ -2615,11 +2636,7 @@ body {
 
   .address {
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    padding-bottom: 10px;
     position: relative;
-    padding-top: 13px;
   }
 
   .address::after {
@@ -2634,13 +2651,12 @@ body {
   }
 
   .address__list {
-    padding-top: 4px;
-    padding-left: 10px;
-    padding-bottom: 10px;
+    padding-left: 25px;
+    padding-bottom: 17px;
   }
 
   .address__item:first-of-type {
-    margin-bottom: 14px;
+    margin-bottom: 10px;
   }
 
   .address__title {
@@ -2658,7 +2674,10 @@ body {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 10px;
+    padding-top: 23px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 20px;
   }
 
   .address__link {

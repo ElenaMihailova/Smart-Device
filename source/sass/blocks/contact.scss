@@ -1,8 +1,11 @@
 .contact {
   @include vp-1600 {
     min-width: auto;
+    padding-top: 0;
   }
+
   min-width: 480px;
+  align-self: center;
 }
 
 .contact__list {
@@ -20,11 +23,11 @@
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
   max-width: 480px;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding-left: 12px;
   padding-right: 8px;
+  gap: 20px;
 }
 
 .contact__link {
@@ -70,4 +73,8 @@
   }
 
   // min-width: 225px;
+}
+
+.contact__item:nth-child(2) {
+  margin-left: auto;
 }
